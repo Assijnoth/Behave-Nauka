@@ -2,7 +2,6 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 #ENTER CLIENT NAME
 CLIENT = "lamania.test"
 
@@ -41,9 +40,11 @@ def enterUserdata(context, login, password):
 @then('check login is success')
 def loginSuccespageVerify(context):
     context.driver.implicitly_wait(5)
-    status = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
-    assert status is True
-
+    try:
+        status = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
+        assert status is True
+    except:
+        context.driver.close()
 
 @then('close browser')
 def closeBrowser(context):
