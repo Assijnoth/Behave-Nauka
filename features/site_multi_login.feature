@@ -1,5 +1,5 @@
 Feature: Site login
-  Scenario Outline: Testing sign in
+  Scenario Outline: Testing signin with various logins
      Given Launch browser
       When open site
       Then go to login section
@@ -8,6 +8,7 @@ Feature: Site login
        And close browser
 
 
+#Enter user accounts for testing
 
  Examples: Users
    | login                 | password             |
