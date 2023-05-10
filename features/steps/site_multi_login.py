@@ -1,12 +1,25 @@
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import logging
+
+
+LOG_DIR = "log"
+LOG_FILENAME = "failed_scenarios.log"
+
+logging.basicConfig(
+    filename=LOG_DIR + "/" + LOG_FILENAME,
+    encoding="utf-8",
+    level=logging.INFO,
+    format="%(asctime)s:%(levelname)s:%(message)s",
+)
+
 
 #ENTER CLIENT NAME
 CLIENT = "lamania.test"
 
 #ENTER DRIVER PATH
-DRIVERS = "/home/mnoworyta/lazelab/nauka/behave/geckodriver"
+DRIVERS = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"
 
 SITE = "https://" + CLIENT + "-ecompwa.com/"
 
@@ -37,13 +50,14 @@ def enterUserdata(context, login, password):
 
 #Check if LOGOUT is available
 
-@then('check login is success')
-def loginSuccespageVerify(context):
-    context.driver.implicitly_wait(5)
+@then('check login {login} is success')
+def loginSuccespageVerify(context, login):
+    context.driver.implicitly_wait(2)
     try:
         status = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
         assert status is True
     except:
+        logging.error("Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER " + login)
         context.driver.close()
 
 @then('close browser')

@@ -4,7 +4,7 @@ Feature: Site login
       When open site
       Then go to login section
        And enter username <login> and password <password>
-       And check login is success
+       And check login <login> is success
        And close browser
 
 
