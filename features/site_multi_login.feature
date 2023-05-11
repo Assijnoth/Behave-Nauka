@@ -12,6 +12,6 @@
 #
 # Examples: Users
 #   | login                 | password             |
-#   | noworyta@outlook.com  | SdH3swhLbD6P6w@!@#   |
+#   | noworyta@outlook.com  | !@#   |
 #   | error@gmail.com       | SdH3swh              |
 #   | error                 | SdH3swhLbD           |
