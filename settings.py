@@ -11,8 +11,6 @@ CLIENT = "lamania.test"
 #ENTER DRIVER PATH
 DRIVERS = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"
 
-
-
 SITE = "https://" + CLIENT + "-ecompwa.com/"
 
 #FOR TESTING
