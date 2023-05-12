@@ -4,16 +4,14 @@
 2023-05-12 13:56:29,825:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
 2023-05-12 13:56:30,252:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
 2023-05-12 13:57:38,556:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
-2023-05-12 13:57:38,914:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-12 13:57:45,008:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
-2023-05-12 13:57:45,363:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-12 13:57:51,811:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
-2023-05-12 13:57:52,164:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-12 13:58:47,551:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
-2023-05-12 13:58:47,911:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
 2023-05-12 13:58:53,801:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
 2023-05-12 13:58:54,158:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
 2023-05-12 13:59:00,271:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
 2023-05-12 13:59:00,627:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
 2023-05-12 13:59:31,823:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-05-12 13:59:39,341:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-12 14:46:53,536:ERROR:  Scenario: Is off category 404?                 |   SITE STATUS IS: <Response [200]>
+2023-05-12 14:47:17,064:ERROR:  Scenario: Is off category 404?                 |   SITE STATUS IS: <Response [200]>
+2023-05-12 14:47:19,077:ERROR:  Scenario: Is off category 404?                 |   SITE STATUS IS: <Response [200]>
+2023-05-12 14:49:40,389:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-12 14:49:47,980:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
