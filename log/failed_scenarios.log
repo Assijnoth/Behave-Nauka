@@ -34,9 +34,6 @@
 2023-05-11 13:41:38,520:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
 2023-05-11 16:54:09,481:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-05-11 16:54:17,116:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-
-2023-05-11 17:02:18,993:ERROR:
-2023-05-11 17:05:13,290:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 17:05:59,069:ERROR:
-2023-05-11 17:06:52,373:ERROR:https://lamania.test-ecompwa.com/c/wyl-kategoria
-2023-05-11 17:07:18,667:ERROR:<Response [200]>
+2023-05-12 11:41:52,239:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
+2023-05-12 11:41:53,149:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
+2023-05-12 11:41:53,834:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
