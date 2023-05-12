@@ -1,39 +1,19 @@
 
-2023-05-11 13:05:39,128:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:05:51,232:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:05:58,895:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 13:08:05,729:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:08:17,937:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:08:25,571:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 13:10:24,713:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:11:29,607:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:11:36,872:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 13:12:11,119:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:12:18,505:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 13:13:35,203:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:16:28,901:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:16:37,040:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:16:45,303:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:16:53,854:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:18:09,669:ERROR:  Scenario: Is homepage 404                      |   SITE IS 404: https://www.morele.net/p/we/
-2023-05-11 13:18:17,874:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:18:18,233:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:18:26,596:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:18:26,961:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:18:35,024:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:18:35,380:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:19:53,999:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:19:54,353:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:20:00,429:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:20:00,785:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:20:06,756:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE
-2023-05-11 13:20:07,115:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
-2023-05-11 13:20:57,516:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:21:05,043:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 13:41:30,947:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 13:41:38,520:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-11 16:54:09,481:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-11 16:54:17,116:ERROR:  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-12 11:41:52,239:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
-2023-05-12 11:41:53,149:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
-2023-05-12 11:41:53,834:ERROR:  Scenario: Is category 404                      |   CATEGORY IS 404: https://www.morele.net/p/123/
+2023-05-12 13:56:28,384:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
+2023-05-12 13:56:29,297:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
+2023-05-12 13:56:29,825:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
+2023-05-12 13:56:30,252:ERROR:  Scenario: Is homepage 200?                     |   SITE STATUS IS: <Response [404]>
+2023-05-12 13:57:38,556:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:57:38,914:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
+2023-05-12 13:57:45,008:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:57:45,363:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
+2023-05-12 13:57:51,811:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:57:52,164:ERROR:  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS
+2023-05-12 13:58:47,551:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:58:47,911:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-05-12 13:58:53,801:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:58:54,158:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-05-12 13:59:00,271:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-12 13:59:00,627:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-05-12 13:59:31,823:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-12 13:59:39,341:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error

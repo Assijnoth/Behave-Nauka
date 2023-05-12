@@ -1,8 +1,4 @@
-from behave import *
 import logging
-import requests
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 
 #ENTER CLIENT NAME
 
@@ -12,10 +8,7 @@ CLIENT = "lamania.test"
 DRIVERS = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"
 
 SITE = "https://" + CLIENT + "-ecompwa.com/"
-
-#FOR TESTING
-# SITE = "https://www.morele.net/p/we/"
-
+# SITE = "https://www.morele.net/qwe/"
 
 LOG_DIR = "log"
 LOG_FILENAME = "failed_scenarios.log"

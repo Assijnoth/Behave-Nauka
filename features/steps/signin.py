@@ -1,11 +1,14 @@
-# from settings import *
-#
+# from settings import DRIVERS, SITE
+# import logging
+# from selenium import webdriver
+# from behave import *
+# from selenium.webdriver.common.by import By
 #
 # @given('launch browser')
 # def launchBrowser(context):
 #     context.driver = webdriver.Firefox(executable_path=DRIVERS)
 #
-# @when('open site')
+# @when('open homepage')
 # def openHomePage(context):
 #     context.driver.get(SITE)
 #
@@ -15,7 +18,7 @@
 #         context.driver.implicitly_wait(3)
 #         context.driver.find_element(By.CSS_SELECTOR, ".btn-icons-h").click()
 #     except:
-#         logging.error("  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN MODULE")
+#         logging.error("  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE")
 #         context.driver.close()
 #
 # @then('enter username {login} and password {password}')
@@ -28,7 +31,7 @@
 #         context.driver.find_element_by_xpath("//input[@placeholder='Hasło']").send_keys(password)
 #         context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(5)").click()
 #     except:
-#         logging.error("  Scenario: Testing signin with various logins   |   NOT FOUND LOGIN INPUTS")
+#         logging.error("  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE")
 #         context.driver.close()
 #
 #
@@ -41,7 +44,7 @@
 #         status = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
 #         assert status is True
 #     except:
-#         logging.error("  Scenario: Testing signin with various logins   |   INVALID LOGIN/PASSWORD FOR USER " + login)
+#         logging.error("  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER " + login)
 #         context.driver.close()
 #
 # @then('close browser')
