@@ -1,5 +1,7 @@
 import logging
 
+
+
 #ENTER CLIENT NAME
 
 CLIENT = "lamania.test"
@@ -8,11 +10,14 @@ CLIENT = "lamania.test"
 DRIVERS = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"
 
 SITE = "https://" + CLIENT + "-ecompwa.com/"
-# SITE = "https://www.morele.net/qwe/"
+
+
+
+
+#LOG SETTINGS
 
 LOG_DIR = "log"
 LOG_FILENAME = "failed_scenarios.log"
-
 
 logging.basicConfig(
     filename=LOG_DIR + "/" + LOG_FILENAME,
