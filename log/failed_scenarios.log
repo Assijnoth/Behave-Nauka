@@ -1,32 +1,19 @@
-2023-05-15 16:03:24,665:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
-2023-05-15 16:03:37,673:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-15 16:03:45,127:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-15 16:05:32,509:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-15 16:05:40,015:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-15 16:06:23,399:ERROR:  Scenario: Is homepage 404?                     |   HOMEPAGE IS 404
-2023-05-15 16:06:39,973:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-15 16:06:47,496:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-15 16:13:21,664:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
-2023-05-15 16:13:34,275:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
-2023-05-15 16:13:41,506:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
-2023-05-16 11:08:40,669:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404<Response [200]>
-2023-05-16 11:14:17,530:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404
-2023-05-16 11:24:43,073:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS NOT 404 but <Response [404]>
-2023-05-16 12:12:22,340:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS NOT 404 AND SITE STATUS IS <Response [404]>
-2023-05-16 12:27:20,328:INFO:Strona jest ok200
-2023-05-16 13:00:08,462:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404
-2023-05-16 13:04:14,015:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
-2023-05-16 13:13:38,083:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-05-16 13:14:36,000:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-05-16 13:16:26,331:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-05-16 13:16:47,067:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
-2023-05-16 13:19:29,114:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-05-16 13:19:43,579:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-05-16 13:21:34,461:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
-2023-05-16 13:23:52,930:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
-2023-05-16 13:24:13,756:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
-2023-05-16 13:34:23,190:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
-2023-05-16 13:35:08,895:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
-2023-05-16 13:35:53,670:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
-2023-05-16 13:37:44,078:INFO:ok
-2023-05-16 13:39:40,594:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-16 17:10:46,222:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-16 17:10:58,465:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-16 17:11:06,414:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-16 17:16:32,646:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-16 17:16:44,911:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-16 17:16:52,317:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-16 17:22:40,100:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-16 17:22:52,715:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-16 17:23:00,278:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-16 17:23:51,966:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 17:23:56,282:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 17:24:00,899:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 17:26:44,020:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-16 17:27:09,753:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-16 17:27:17,266:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-16 17:28:18,839:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-16 17:29:04,624:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-16 17:29:30,539:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-16 17:29:37,806:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
