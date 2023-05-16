@@ -9,3 +9,24 @@
 2023-05-15 16:13:21,664:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
 2023-05-15 16:13:34,275:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-05-15 16:13:41,506:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-16 11:08:40,669:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404<Response [200]>
+2023-05-16 11:14:17,530:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404
+2023-05-16 11:24:43,073:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS NOT 404 but <Response [404]>
+2023-05-16 12:12:22,340:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS NOT 404 AND SITE STATUS IS <Response [404]>
+2023-05-16 12:27:20,328:INFO:Strona jest ok200
+2023-05-16 13:00:08,462:ERROR:  Scenario: Is homepage 200?                     |   HOMEPAGE IS 404
+2023-05-16 13:04:14,015:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-05-16 13:13:38,083:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 13:14:36,000:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 13:16:26,331:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 13:16:47,067:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-05-16 13:19:29,114:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 13:19:43,579:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-16 13:21:34,461:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 13:23:52,930:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 13:24:13,756:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 13:34:23,190:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 13:35:08,895:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-16 13:35:53,670:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-16 13:37:44,078:INFO:ok
+2023-05-16 13:39:40,594:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
