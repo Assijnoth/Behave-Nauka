@@ -17,3 +17,44 @@
 2023-05-16 17:29:04,624:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
 2023-05-16 17:29:30,539:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-05-16 17:29:37,806:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-17 10:20:34,285:ERROR:  Scenario: Does enabled category return items?  |   CATEGORY SITE IS 404
+2023-05-17 10:22:43,178:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-17 10:30:15,577:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:34:45,760:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:34:47,516:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:34:50,515:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:34:52,184:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:34:55,228:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:34:56,887:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:35:09,872:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:35:11,530:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:35:14,504:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:35:16,160:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:35:18,985:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-17 10:35:20,850:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:36:20,990:ERROR:  Scenario: Signin with various logins            |   SITE NOT FOUND
+2023-05-17 10:36:22,642:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:36:25,539:ERROR:  Scenario: Signin with various logins            |   SITE NOT FOUND
+2023-05-17 10:36:27,292:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:36:30,126:ERROR:  Scenario: Signin with various logins            |   SITE NOT FOUND
+2023-05-17 10:36:31,911:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:37:52,901:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:37:54,460:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:37:57,315:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:37:59,066:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:38:02,126:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:38:03,677:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:39:09,929:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-17 10:42:38,809:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:42:43,307:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:42:47,872:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:43:53,483:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:43:58,290:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:44:02,889:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-05-17 10:44:23,244:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-17 10:44:30,830:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-17 10:46:53,612:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:46:59,953:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:47:06,399:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
+2023-05-17 10:48:39,369:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-17 10:48:46,771:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
