@@ -7,7 +7,7 @@
 # from selenium.common.exceptions import NoSuchElementException
 #
 #
-# SITE_TEMP = SITE + "c/akcesorasdia"
+# SITE_TEMP = SITE + "c/akcesoria"
 #
 #
 # @given('run webdrivers')

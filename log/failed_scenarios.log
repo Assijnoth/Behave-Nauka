@@ -64,3 +64,9 @@
 2023-05-18 10:56:39,973:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
 2023-05-18 10:57:36,209:INFO:???
 2023-05-18 11:49:53,038:ERROR:  Scenario: Does enabled category return items?  |   CATEGORY SITE IS 404
+2023-05-18 12:47:09,207:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-18 12:48:09,905:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND
+2023-05-18 12:48:53,823:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS 200
+2023-05-18 13:12:09,091:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS 200
+2023-05-18 13:13:06,620:ERROR:  Scenario: Is active category visible?          |   NO ELEMENT IN MEGAMENU
+2023-05-18 16:24:09,022:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND

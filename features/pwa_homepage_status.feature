@@ -1,4 +1,4 @@
-#Feature:
+#Feature: Homepage is 200
 #  Scenario: Is homepage not 404?
 #     Given launch browser
 #      When open homepage
