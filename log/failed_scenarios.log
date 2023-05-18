@@ -58,3 +58,9 @@
 2023-05-17 10:47:06,399:ERROR:  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE
 2023-05-17 10:48:39,369:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-05-17 10:48:46,771:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-18 10:51:25,654:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-18 10:53:35,796:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-18 10:55:47,244:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-18 10:56:39,973:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-18 10:57:36,209:INFO:???
+2023-05-18 11:49:53,038:ERROR:  Scenario: Does enabled category return items?  |   CATEGORY SITE IS 404
