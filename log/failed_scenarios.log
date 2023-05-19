@@ -70,3 +70,11 @@
 2023-05-18 13:12:09,091:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS 200
 2023-05-18 13:13:06,620:ERROR:  Scenario: Is active category visible?          |   NO ELEMENT IN MEGAMENU
 2023-05-18 16:24:09,022:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND
+2023-05-19 13:14:36,189:ERROR: NIE MA KOSZYKA
+2023-05-19 13:18:01,358:ERROR:  Scenario: Does enabled category return items?  |   ITEM IS NOT IN CART
+2023-05-19 13:21:34,776:ERROR:  Scenario: Can I add item to cart?              |   SITE NOT FOUND
+2023-05-19 13:21:52,556:ERROR:  Scenario: Can I add item to cart?              |  SITE IS 404
+2023-05-19 13:22:49,335:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
+2023-05-19 13:23:47,451:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
+2023-05-19 13:26:16,746:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
+2023-05-19 13:28:34,748:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
