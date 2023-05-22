@@ -1,20 +1,28 @@
 import logging
+from selenium import webdriver
 
 
 # ENTER CLIENT NAME
-
 CLIENT = "lamania.test"
 
 # ENTER DRIVER PATH
+DRIVERS_PATH = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/drivers/geckodriver"
 
 
-DRIVERS = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"
+# ENTER BROWSER NAME (example: "Firefox", "Chrome")  - TO DO  tutaj settings local
+BROWSER_NAME = "Firefox"
+
+
+BROWSERS = {
+    "Firefox": {"class": webdriver.Firefox, "exec_path": "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/geckodriver"},
+    "Chrome": {"class": webdriver.Chrome, "exec_path": ""}
+}
+
 
 SITE = "https://" + CLIENT + "-ecompwa.com/"
 
 
 # LOG SETTINGS
-
 LOG_DIR = "log"
 LOG_FILENAME = "failed_scenarios.log"
 

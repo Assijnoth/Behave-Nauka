@@ -78,3 +78,60 @@
 2023-05-19 13:23:47,451:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
 2023-05-19 13:26:16,746:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
 2023-05-19 13:28:34,748:ERROR:  Scenario: Can I add item to cart?              |   CAN'T OPEN CART <Response [200]>
+2023-05-20 22:43:28,690:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-20 22:43:44,267:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 11:15:25,587:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:15:52,260:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:16:11,854:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:16:37,803:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:17:14,090:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:18:25,238:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:18:42,615:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:19:08,836:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:27:10,486:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:51:36,592:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:52:16,955:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:52:55,871:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:55:25,296:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 11:56:06,339:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CARTt
+2023-05-22 11:56:30,238:ERROR:  Scenario: Can I add item to cart?              |   CANT REMOVE ITEM FROM CART
+2023-05-22 12:20:41,401:INFO:NIE
+2023-05-22 12:21:10,083:INFO:NIE
+2023-05-22 12:29:51,734:INFO:NIE
+2023-05-22 12:31:25,282:INFO:TAK
+2023-05-22 12:38:51,211:INFO:NIE czyli git
+2023-05-22 12:39:44,370:INFO:NIE czyli git
+2023-05-22 12:40:26,244:INFO:wyswietla a nie powinno
+2023-05-22 12:51:24,457:ERROR:  Can I add and then remove item from cart?      |
+2023-05-22 12:52:14,665:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
+2023-05-22 12:56:28,603:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
+2023-05-22 13:03:10,833:ERROR:  Can I add and then remove item from cart?      |   BUTTON IS INACTIVE
+2023-05-22 13:04:40,890:ERROR:  Can I add and then remove item from cart?      |   BUTTON IS INACTIVE
+2023-05-22 13:04:56,391:ERROR:  Can I add and then remove item from cart?      |   BUTTON IS INACTIVE
+2023-05-22 13:55:49,788:ERROR:  Can I add and then remove item from cart?      |   SITE NOT FOUND
+2023-05-22 13:56:27,888:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
+2023-05-22 13:56:46,775:ERROR:  Can I add and then remove item from cart?      |   SITE IS 404
+2023-05-22 14:15:59,505:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-22 14:16:16,780:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 14:16:24,463:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-22 14:21:24,778:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-22 14:21:57,250:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-22 14:26:49,185:ERROR:  Scenario: Does enabled category return items?  |   CATEGORY SITE IS 404
+2023-05-22 14:27:01,752:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 14:27:09,587:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-22 14:28:37,484:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-05-22 14:28:56,465:ERROR:  Scenario: Does enabled category return items?  |   CATEGORY SITE IS 404
+2023-05-22 14:29:37,731:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-22 15:06:53,935:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 15:07:01,901:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-22 15:52:52,762:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-05-22 15:54:53,629:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-05-22 15:56:28,193:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-22 15:56:57,656:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-05-22 15:57:33,718:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-22 16:03:34,369:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-22 16:03:52,042:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 16:03:59,903:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-22 16:34:53,367:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-22 16:35:10,820:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-22 16:35:18,266:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
