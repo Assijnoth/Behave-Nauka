@@ -1,0 +1,11 @@
+Potrzebuję stałych selektorów CSS dla elementów:
+
+1. Megamenu
+2. Koszyk
+3. Moje konto / zaloguj / przypomnij hasło / wyloguj
+4. Dodaj do koszyka
+5. Filtrowanie/sortowanie
+6. Box z potwierdzeniem dodania do koszyka
+7. Napis 404
+
+Oraz XPATH input dla danych logowania
