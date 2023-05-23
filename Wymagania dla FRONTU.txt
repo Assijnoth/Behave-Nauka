@@ -7,5 +7,6 @@ Potrzebuję stałych selektorów CSS dla elementów:
 5. Filtrowanie/sortowanie
 6. Box z potwierdzeniem dodania do koszyka
 7. Napis 404
+8. Checkout - pola z placeholderami Imię, Nazwisko, Adres itd.)
 
 Oraz XPATH input dla danych logowania
