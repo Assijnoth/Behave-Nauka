@@ -61,8 +61,8 @@ def go_to_cart_and_confirm(context):
                       + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
         context.driver.close()
 
-
-@then('complete checkout forms')
+# UZUPEŁNIA FORMULARZE I WCISKA "PRZEJDZ DO DOSTAWY"
+@then('complete checkout forms and confirm')
 def step_impl(context):
     try:
         context.driver.implicitly_wait(3)
@@ -80,36 +80,70 @@ def step_impl(context):
         context.driver.find_element_by_xpath("//input[@placeholder='Miasto']").send_keys("Kraków")
         context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").clear()
         context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").send_keys("123234345")
+        try:
+            context.driver.implicitly_wait(3)
+            context.driver.find_element(By.CSS_SELECTOR, ".btn-text").click()
+        except:
+            site_response = requests.get(SITE, timeout=5)
+            logging.error("  Can I add and then remove item from cart?      |"
+                + "   CAN'T CONFIRM FORMS AND SITE IS: " + str(site_response))
+
     except:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Can I add and then remove item from cart?      |"
                       + "   CAN'T FILL CHECKOUT FORMS AND SITE IS: " + str(site_response))
         context.driver.close()
 
+
+# WYBIERA DPD I "PRZECHODZI DO PŁATNOŚCI"
+
+
 @then(u'mark DPD shipment')
 def step_impl(context):
-    pass
+    try:
+        context.driver.implicitly_wait(3)
+        context.driver.find_element(By.CSS_SELECTOR, ".shipping-method-tile:nth-child(4)").click()
+        context.driver.find_element(By.CSS_SELECTOR, ".mt - sm >.btn - text").click()
+    except NoSuchElementException:
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Can I add and then remove item from cart?      |"
+                      + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
+        context.driver.close()
 
+# WYBIERA PAYU I "PRZECHODZI DO POTWIERDZENIA"
 
 @then(u'mark PayU Fast payment')
 def step_impl(context):
-    pass
+    try:
+        context.driver.implicitly_wait(3)
+        context.driver.find_element(By.CSS_SELECTOR, ".payment-method-tile:nth-child(7) > .jc-sb").click()
+    except NoSuchElementException:
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Can I add and then remove item from cart?      |"
+                      + "   CAN'T CONFIRM PAYU FAST" + str(site_response))
+        context.driver.close()
 
+
+# ZAZNACZA WYMAGANE ZGODY
 
 @then(u'complete checkboxes')
 def step_impl(context):
     pass
 
+# PRZECHODZI DO PAYU SANDBOX
 
 @then(u'confirm checkout')
 def step_impl(context):
     pass
 
+# POTWIERDZA PŁATNOŚĆ W SANDBOX
 
 @then(u'confirm payment')
 def step_impl(context):
     pass
 
+
+# SPRAWDZA CZY WYŚWIETLA SIĘ NAPIS Z POTWIERDZENIEM ZAMÓWIENIA
 
 @then(u'check if successpage appear')
 def step_impl(context):

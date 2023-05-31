@@ -145,3 +145,27 @@
 2023-05-23 14:56:58,308:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
 2023-05-23 14:58:06,640:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
 2023-05-23 14:58:13,096:ERROR:  Can I add and then remove item from cart?      |   CAN'T OPEN CART <Response [200]>
+2023-05-29 14:20:02,708:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-05-29 14:20:20,560:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-05-29 14:20:27,999:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-05-29 14:21:55,287:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:52:04,945:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:52:11,647:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:53:59,680:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:54:07,089:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:54:23,029:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:54:29,868:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:56:07,291:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 11:56:14,144:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:14:15,509:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:14:19,155:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:14:26,023:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:14:29,630:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:14:58,995:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:15:02,558:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:15:09,195:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:15:12,660:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:22:27,506:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:28:39,304:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-05-30 12:31:57,210:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-05-30 12:32:05,316:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>

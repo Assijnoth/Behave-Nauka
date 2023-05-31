@@ -5,7 +5,7 @@ Feature: DPD orders
        When ordered item site
        Then adding item to cart
         And go to cart and confirm
-        And complete checkout forms
+        And complete checkout forms and confirm
         And mark DPD shipment
 
   Scenario: Making order with DPD and PayU Fast Payment
