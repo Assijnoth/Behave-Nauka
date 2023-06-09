@@ -169,3 +169,67 @@
 2023-05-30 12:28:39,304:ERROR:  Can I add and then remove item from cart?      |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
 2023-05-30 12:31:57,210:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
 2023-05-30 12:32:05,316:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:06:08,584:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:06:16,795:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:19:06,958:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:19:14,702:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:19:48,957:ERROR:  Can I add and then remove item from cart?      |   CAN'T CONFIRM PAYU FAST<Response [200]>
+2023-06-07 16:21:14,662:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-07 16:22:35,856:ERROR:  Can I add and then remove item from cart?      |   CAN'T PROCEED TO CHECKOUT <Response [200]>
+2023-06-09 12:32:31,320:ERROR:  Can I add and then remove item from cart?      |   CAN'T CONFIRM PAYU FAST<Response [200]>
+2023-06-09 12:32:59,595:ERROR:  Can I add and then remove item from cart?      |   CAN'T CONFIRM PAYU FAST<Response [200]>
+2023-06-09 12:33:23,486:ERROR:  Can I add and then remove item from cart?      |   CAN'T CONFIRM PAYU FAST<Response [200]>
+2023-06-09 12:34:43,934:ERROR:  Can I add and then remove item from cart?      |   CAN'T CONFIRM PAYU FAST<Response [200]>
+2023-06-09 13:05:44,829:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:05:59,946:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:06:48,675:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:07:26,241:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:07:39,098:ERROR:  Scenario: DPD order                            |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-09 13:07:39,099:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f543cd74610>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/748f7d51-d5e5-48d5-9783-bf9d3d915a9f/window
+2023-06-09 13:07:39,099:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f543cd88310>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/748f7d51-d5e5-48d5-9783-bf9d3d915a9f/window
+2023-06-09 13:07:39,099:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f543cd88e50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/748f7d51-d5e5-48d5-9783-bf9d3d915a9f/window
+2023-06-09 13:09:36,034:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:10:31,789:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:10:45,980:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:11:03,981:ERROR:  Scenario: DPD order                            |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-09 13:20:12,451:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:24:33,941:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:25:01,306:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:27:34,887:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:27:51,165:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:28:35,444:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:28:50,494:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT<Response [200]>
+2023-06-09 13:45:45,531:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 13:46:30,118:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 13:47:05,603:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:14:33,394:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:15:03,533:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT<Response [200]>
+2023-06-09 14:15:24,995:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT<Response [200]>
+2023-06-09 14:15:46,127:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:17:19,791:ERROR:  Scenario: DPD order                            |   CAN'T COMPLETE CHECKOUT<Response [200]>
+2023-06-09 14:17:48,664:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:40:52,878:ERROR:  Scenario: DPD order                            |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-09 14:41:30,394:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:41:47,670:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:42:35,035:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:43:17,202:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:44:13,943:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 14:45:09,170:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 14:46:08,143:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 14:46:47,131:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 14:47:14,304:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 14:47:46,496:ERROR:  Scenario: DPD order                            |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-09 14:48:20,498:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT<Response [200]>
+2023-06-09 15:11:02,359:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 15:17:22,573:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT<Response [200]>
+2023-06-09 15:17:37,026:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 15:19:02,710:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 15:22:15,093:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 15:31:45,136:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES<Response [200]>
+2023-06-09 15:32:25,556:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-09 15:33:19,636:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-09 15:43:13,891:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 15:43:59,824:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 15:49:27,695:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-09 15:50:50,640:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-09 16:02:15,095:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>

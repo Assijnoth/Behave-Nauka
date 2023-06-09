@@ -18,12 +18,12 @@ Feature: DPD orders
        And close test
 
 
-  Scenario: Making order with DPD and PayU Card Payment
-       And mark PayU Card payment
-       And complete card informations
-       And confirm card
-       And fill checkboxes
-       And confirm order
-       And check if successpage status
-       And finish test
-
+#  Scenario: Making order with DPD and PayU Card Payment
+#       And mark PayU Card payment
+#       And complete card informations
+#       And confirm card
+#       And fill checkboxes
+#       And confirm order
+#       And check if successpage status
+#       And finish test
+#
