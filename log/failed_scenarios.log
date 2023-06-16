@@ -233,3 +233,37 @@
 2023-06-09 15:49:27,695:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
 2023-06-09 15:50:50,640:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM CHECKBOXES <Response [200]>
 2023-06-09 16:02:15,095:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-09 16:45:33,873:ERROR:  Scenario: DPD order                            |   CAN'T COMPLETE CHECKOUT<Response [200]>
+2023-06-14 10:08:31,012:ERROR:  Scenario: DPD order                            |   CAN'T CONFIRM PAYMENT ON PAYU SITE<Response [200]>
+2023-06-14 10:39:05,870:ERROR:  Scenario: DPD order                            |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
+2023-06-14 10:39:43,512:ERROR:  Scenario: DPD order                            |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
+2023-06-14 10:57:45,166:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 10:58:33,398:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 10:59:53,959:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 11:02:14,401:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 11:03:41,475:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 11:05:36,692:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:13:27,947:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:14:01,404:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:15:00,426:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:16:38,411:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:18:52,228:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:22:35,280:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:31:01,607:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 12:32:07,181:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-14 13:43:59,899:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-14 13:44:40,630:ERROR:  Scenario: DPD order                            |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-14 13:50:35,976:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-14 14:44:03,492:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 11:12:44,739:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 11:13:49,238:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 11:16:28,526:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 11:22:19,559:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 12:16:30,531:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:03:50,657:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:11:15,518:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:23:26,192:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:33:10,985:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:33:33,110:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 14:39:47,379:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-16 15:31:03,146:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
