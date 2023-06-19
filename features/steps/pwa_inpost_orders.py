@@ -314,6 +314,14 @@ def test_is_end(context):
 def choose_cod_payment(context):
     try:
         context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(8)").click()
+        try:
+            time.sleep(1.5)
+            context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
+        except NoSuchElementException:
+            site_response = requests.get(SITE, timeout=5)
+            logging.error("  Scenario: INPOST order (FAST PAYMENT)          |"
+                          + "   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT " + str(site_response))
+            context.driver.close()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY COD)                |"
