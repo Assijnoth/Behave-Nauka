@@ -40,7 +40,7 @@ def adding_item_to_cart(context):
             context.driver.close()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |"
+            logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                           + "   CAN'T ADD ITEM TO CART " + str(site_response))
             context.driver.close()
 
@@ -59,11 +59,12 @@ def go_to_cart_and_confirm(context):
         context.driver.find_element(By.CSS_SELECTOR, ".small").click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
         context.driver.close()
 
 # UZUPEŁNIA FORMULARZE I WCISKA "PRZEJDZ DO DOSTAWY"
+
 
 @then('complete checkout forms and confirm')
 def complete_checkout_and_confirm(context):
@@ -86,13 +87,12 @@ def complete_checkout_and_confirm(context):
             context.driver.find_element(By.CSS_SELECTOR, ".btn-text").click()
         except:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |" + "   CAN'T CONFIRM FORMS AND SITE IS: "
+            logging.error("  Scenario: DPD order (FAST PAYMENT)             |" + "   CAN'T CONFIRM FORMS AND SITE IS: "
                           + str(site_response))
             context.driver.close()
-
     except:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T FILL CHECKOUT FORMS AND SITE IS: " + str(site_response))
         context.driver.close()
 
@@ -109,12 +109,12 @@ def mark_dpd_shipment(context):
             context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |"
+            logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                           + "   CAN'T PROCEED AFTER CHOOSING DPD SHIPMENT " + str(site_response))
             context.driver.close()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T CHOOSE DPD SHIPMENT " + str(site_response))
         context.driver.close()
 
@@ -130,12 +130,12 @@ def mark_payu_fast_payment(context):
             context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |"
+            logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                           + "   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT " + str(site_response))
             context.driver.close()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T CHOOSE PAYU FAST PAYMENT " + str(site_response))
         context.driver.close()
 
@@ -149,7 +149,7 @@ def complete_checkboxes(context):
         context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T CONFIRM CHECKBOXES " + str(site_response))
         context.driver.close()
 
@@ -162,21 +162,21 @@ def confirm_checkout(context):
         context.driver.find_element(By.CSS_SELECTOR, ".button-basic").click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T COMPLETE CHECKOUT" + str(site_response))
         context.driver.close()
 
 
 # WYBIERA PŁATNOŚC BLIK -> POTWIERDZA -> LOGOUT
 
-@then(u'confirm payment')
-def confirm_payment(context):
+@then(u'confirm payment on payu')
+def confirm_payment_payu(context):
     try:
         context.driver.find_element(By.CSS_SELECTOR, "div.button-like").click()
         context.driver.find_element(By.CSS_SELECTOR, "#formSubmit").click()
         context.driver.find_element(By.CSS_SELECTOR, "#btnLogout").click()
     except NoSuchElementException:
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T CONFIRM PAYMENT ON PAYU SITE")
         context.driver.close()
 
@@ -187,7 +187,7 @@ def check_successpage(context):
     try:
         context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
     except NoSuchElementException:
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")
         context.driver.close()
 
@@ -197,19 +197,19 @@ def close_test(context):
     context.driver.close()
 
 
-@then(u'mark PayU Card payment')
+@then('mark PayU Card payment')
 def mark_payu_card(context):
     try:
         context.driver.find_element(By.CSS_SELECTOR, ".mt-xsm > span:nth-child(1)").click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (BY CARD)                  |"
                       + "   CAN'T CHOOSE PAYU FAST PAYMENT " + str(site_response))
         context.driver.close()
 
 
-@then(u'complete card informations')
-def step_impl(context):
+@then('complete card informations')
+def complete_card_informations(context):
     try:
         context.driver.switch_to.frame(2)
         context.driver.find_element(By.ID, "card-number").send_keys("4444333322221111")
@@ -226,33 +226,49 @@ def step_impl(context):
             context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |"
+            logging.error("  Scenario: DPD order (BY CARD)                  |"
                           + "   CAN'T PROCEED AFTER CHOOSING PAYU CARD PAYMENT " + str(site_response))
+            context.driver.close()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order                            |"
+        logging.error("  Scenario: DPD order (BY CARD)                  |"
                       + "   CAN'T COMPLETE CARD FORMS " + str(site_response))
+        context.driver.close()
 
 
-
-@then(u'fill checkboxes')
-def step_impl(context):
-    pass
-
-
-@then(u'confirm order')
-def step_impl(context):
-    pass
-
-
-@then(u'check if successpage status')
-def step_impl(context):
-    pass
+@then('fill checkboxes')
+def fill_checkboxes(context):
+    try:
+        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)").click()
+        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
+    except NoSuchElementException:
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Scenario: DPD order (BY CARD)                  |"
+                      + "   CAN'T CONFIRM CHECKBOXES " + str(site_response))
+        context.driver.close()
 
 
-@then(u'finish test')
-def step_impl(context):
-    pass
+@then('finish checkout')
+def finish_checkout(context):
+    try:
+        context.driver.find_element(By.CSS_SELECTOR, ".button-basic").click()
+    except NoSuchElementException:
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
+                      + "   CAN'T COMPLETE CHECKOUT" + str(site_response))
+        context.driver.close()
 
 
+@then('check successpage status')
+def check_successpage_status(context):
+    try:
+        context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
+    except NoSuchElementException:
+        logging.error("  Scenario: DPD order (BY CARD)                  |"
+                      + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")
+        context.driver.close()
 
+
+@then('finish test')
+def finish_test(context):
+    context.driver.close()

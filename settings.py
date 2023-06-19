@@ -15,6 +15,7 @@ BROWSER_NAME = "Firefox"
 
 BROWSERS = {
     "Firefox": {"class": webdriver.Firefox, "exec_path": "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/drivers/geckodriver"},
+    "Safaro": {"class": webdriver.Safari, "exec_path": ""},
     "Chrome": {"class": webdriver.Chrome, "exec_path": ""}
 }
 

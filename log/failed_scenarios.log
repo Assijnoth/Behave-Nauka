@@ -267,3 +267,15 @@
 2023-06-16 14:33:33,110:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
 2023-06-16 14:39:47,379:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
 2023-06-16 15:31:03,146:ERROR:  Scenario: DPD order                            |   CAN'T PROCEED AFTER CHOOSING PAYU FAST PAYMENT <Response [200]>
+2023-06-19 10:19:26,090:ERROR:  Scenario: DPD order (FAST PAYMENT)              |   CAN'T ADD ITEM TO CART <Response [200]>
+2023-06-19 10:21:32,073:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   CAN'T ADD ITEM TO CART <Response [200]>
+2023-06-19 10:23:13,814:ERROR:  Scenario: DPD order (BY CARD)                  |   CAN'T CHOOSE PAYU FAST PAYMENT <Response [200]>
+2023-06-19 10:24:58,939:ERROR:  Scenario: DPD order (BY CARD)                  |   CAN'T CONFIRM PAYMENT ON PAYU SITE
+2023-06-19 10:26:12,049:ERROR:  Scenario: DPD order (BY CARD)                  |   CAN'T CONFIRM PAYMENT ON PAYU SITE
+2023-06-19 10:29:11,351:ERROR:  Scenario: DPD order (BY CARD)                  |   CAN'T CONFIRM PAYMENT ON PAYU SITE
+2023-06-19 10:33:26,995:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-06-19 10:33:45,922:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-19 10:33:53,756:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-06-19 10:37:50,617:ERROR:  Can I add and then remove item from cart?      |   CAN'T ADD ITEM TO CART <Response [200]>
+2023-06-19 10:38:01,045:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-06-19 10:38:15,635:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   CAN'T ADD ITEM TO CART <Response [200]>
