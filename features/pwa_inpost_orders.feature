@@ -7,6 +7,8 @@ Feature: Inpost orders
         And move to cart and confirm
         And complete checkout forms then confirm
         And mark INPOST shipment
+        And fill INPOST delivery forms
+        And proceed to picking payment methods
 
   Scenario: Making order with Inpost and PayU Fast Payment
 
@@ -25,3 +27,11 @@ Feature: Inpost orders
        And checkout finish
        And see if successpage is displayed
        And test is end
+
+
+    Scenario: Making order with Inpost and COD payment
+       And choose COD payment
+       And complete marketing consents
+       And complete checkout
+       And check if successpage is displayed
+       And test is over

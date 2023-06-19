@@ -279,3 +279,23 @@
 2023-06-19 10:37:50,617:ERROR:  Can I add and then remove item from cart?      |   CAN'T ADD ITEM TO CART <Response [200]>
 2023-06-19 10:38:01,045:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
 2023-06-19 10:38:15,635:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   CAN'T ADD ITEM TO CART <Response [200]>
+2023-06-19 12:01:37,775:ERROR:  Scenario: INPOST order (FAST PAYMENT)         |   CAN'T CHOOSE DPD SHIPMENT <Response [200]>
+2023-06-19 12:16:47,607:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:22:01,505:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:22:12,227:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:23:01,358:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:23:12,286:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:25:06,827:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:25:17,731:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:26:02,671:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:26:13,530:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:28:28,022:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:28:38,747:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
+2023-06-19 12:32:05,214:ERROR:  Scenario: INPOST order                         |   CAN'T PICK PARCEL LOCKER <Response [200]>
+2023-06-19 12:50:44,132:ERROR:  Scenario: INPOST order                         |   CAN'T PROCEED AFTER CHOOSING INPOST SHIPMENT <Response [200]>
+2023-06-19 13:20:45,184:ERROR:  Scenario: INPOST order (FAST PAYMENT)          |   CAN'T CONFIRM PAYMENT ON PAYU SITE
+2023-06-19 13:22:27,745:ERROR:  Scenario: INPOST order (FAST PAYMENT)          |   CAN'T CONFIRM PAYMENT ON PAYU SITE
+2023-06-19 13:23:56,465:ERROR:  Scenario: INPOST order (FAST PAYMENT)          |   CAN'T COMPLETE CHECKOUT<Response [200]>
+2023-06-19 13:45:30,164:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
+2023-06-19 14:20:49,764:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
+2023-06-19 14:34:05,509:ERROR:  Scenario: INPOST order (BY COD)                |   CAN'T CONFIRM CHECKBOXES <Response [200]>

@@ -40,7 +40,7 @@ def adding_item_to_cart(context):
             context.driver.close()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
+            logging.error("  Scenario: DPD order                            |"
                           + "   CAN'T ADD ITEM TO CART " + str(site_response))
             context.driver.close()
 
@@ -59,7 +59,7 @@ def go_to_cart_and_confirm(context):
         context.driver.find_element(By.CSS_SELECTOR, ".small").click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
+        logging.error("  Scenario: DPD order                            |"
                       + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
         context.driver.close()
 
@@ -87,12 +87,12 @@ def complete_checkout_and_confirm(context):
             context.driver.find_element(By.CSS_SELECTOR, ".btn-text").click()
         except:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order (FAST PAYMENT)             |" + "   CAN'T CONFIRM FORMS AND SITE IS: "
+            logging.error("  Scenario: DPD order                            |" + "   CAN'T CONFIRM FORMS AND SITE IS: "
                           + str(site_response))
             context.driver.close()
     except:
         site_response = requests.get(SITE, timeout=5)
-        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
+        logging.error("  Scenario: DPD order                            |"
                       + "   CAN'T FILL CHECKOUT FORMS AND SITE IS: " + str(site_response))
         context.driver.close()
 
@@ -169,7 +169,7 @@ def confirm_checkout(context):
 
 # WYBIERA PŁATNOŚC BLIK -> POTWIERDZA -> LOGOUT
 
-@then(u'confirm payment on payu')
+@then('confirm payment on payu')
 def confirm_payment_payu(context):
     try:
         context.driver.find_element(By.CSS_SELECTOR, "div.button-like").click()
