@@ -300,3 +300,26 @@
 2023-06-19 14:20:49,764:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
 2023-06-19 14:34:05,509:ERROR:  Scenario: INPOST order (BY COD)                |   CAN'T CONFIRM CHECKBOXES <Response [200]>
 2023-06-19 15:28:51,296:ERROR:  Scenario: INPOST order (BY COD)                |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-20 10:28:40,145:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 10:28:56,346:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 12:17:04,823:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 12:17:15,406:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 12:18:33,960:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 12:18:43,894:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-20 12:18:58,955:ERROR:  Scenario: INPOST order                         |   CAN'T ADD ITEM TO CART <Response [200]>
+2023-06-22 14:52:33,424:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-23 10:15:28,179:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER noworyta@outlook.com
+2023-06-23 10:15:35,105:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-23 10:29:33,045:ERROR:  Scenario: I can create new user                |   NOT FOUND LOGIN MODULE
+2023-06-23 10:30:10,516:ERROR:  Scenario: I can create new user                |   NOT FOUND LOGIN MODULE
+2023-06-27 10:57:22,915:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-06-27 10:58:22,898:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-06-27 11:05:39,247:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-06-27 11:06:35,835:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-06-27 11:07:04,383:ERROR:  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE
+2023-06-27 12:28:59,457:ERROR:  Scenario: I can create new user                |   CANNOT FILL NEW USER INFORMATIONS
+2023-06-27 13:25:15,743:ERROR:  Scenario: I can create new user                |   CANNOT FILL NEW USER INFORMATIONS
+2023-06-27 13:52:39,765:ERROR:  Scenario: I can create new user                |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-27 13:53:04,467:ERROR:  Scenario: I can create new user                |   CAN'T CONFIRM CHECKBOXES <Response [200]>
+2023-06-27 14:28:21,802:ERROR:  Scenario: I can create new user                |   NOT FOUND CONFIRM BOX <Response [200]>
+2023-06-27 17:01:14,349:ERROR:  Scenario: Adding/editing adress to my account  |   NO MY DATA IN MY ACCOUNT MENU
