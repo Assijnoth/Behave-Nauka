@@ -8,11 +8,10 @@ from selenium.common.exceptions import NoSuchElementException
 @given('open browser')
 def open_browser(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
-
+    context.driver.implicitly_wait(3)
 
 @when('open site homepage')
 def open_site_homepage(context):
-    context.driver.implicitly_wait(3)
     try:
         context.driver.get(SITE)
     except:
@@ -25,9 +24,9 @@ def open_site_homepage(context):
 
 @then('go to login section')
 def go_to_login(context):
+    my_account = context.driver.find_element(By.CSS_SELECTOR, ".btn-icons-h")
     try:
-        context.driver.implicitly_wait(3)
-        context.driver.find_element(By.CSS_SELECTOR, ".btn-icons-h").click()
+        my_account.click()
     except NoSuchElementException:
         logging.error("  Scenario: Signin with various logins           |   NOT FOUND LOGIN MODULE")
         context.driver.close()
@@ -35,13 +34,15 @@ def go_to_login(context):
 
 @then('enter username {login} and password {password}')
 def enter_userdata(context, login, password):
+    email_input = context.driver.find_element_by_xpath("//input[@placeholder='E-mail']")
+    password_input =  context.driver.find_element_by_xpath("//input[@placeholder='Hasło']")
+    signin = context.driver.find_element(By.CSS_SELECTOR, "button.btn-primary:nth-child(5) > span:nth-child(1)")
     try:
-        context.driver.implicitly_wait(3)
-        context.driver.find_element_by_xpath("//input[@placeholder='E-mail']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='E-mail']").send_keys(login)
-        context.driver.find_element_by_xpath("//input[@placeholder='Hasło']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Hasło']").send_keys(password)
-        context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(5)").click()
+        email_input.clear()
+        email_input.send_keys(login)
+        password_input.clear()
+        password_input.send_keys(password)
+        signin.click()
     except NoSuchElementException:
         logging.error("  Scenario: Signin with various logins           |   NOT FOUND PASSWORD MODULE")
         context.driver.close()
@@ -51,10 +52,9 @@ def enter_userdata(context, login, password):
 
 @then('check login {login} is success')
 def login_succespage_verify(context, login):
-    context.driver.implicitly_wait(2)
     try:
-        status = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
-        assert status is True
+        logout_button = context.driver.find_element(By.CSS_SELECTOR, "div.link:nth-child(4)").is_displayed()
+        assert logout_button is True
     except NoSuchElementException:
         logging.error("  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER " + login)
         context.driver.close()

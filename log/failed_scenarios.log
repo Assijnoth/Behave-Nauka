@@ -323,3 +323,27 @@
 2023-06-27 13:53:04,467:ERROR:  Scenario: I can create new user                |   CAN'T CONFIRM CHECKBOXES <Response [200]>
 2023-06-27 14:28:21,802:ERROR:  Scenario: I can create new user                |   NOT FOUND CONFIRM BOX <Response [200]>
 2023-06-27 17:01:14,349:ERROR:  Scenario: Adding/editing adress to my account  |   NO MY DATA IN MY ACCOUNT MENU
+2023-06-28 10:06:52,122:ERROR:  Scenario: Adding/editing adress to my account  |   NOT FOUND PASSWORD MODULE
+2023-06-28 10:24:24,137:ERROR:  Scenario: Adding/editing adress to my account  |   NOT FOUND PASSWORD MODULE
+2023-06-28 10:26:48,971:ERROR:  Scenario: Adding/editing adress to my account  |   NOT FOUND PASSWORD MODULE
+2023-06-28 10:27:13,670:ERROR:  Scenario: Adding/editing adress to my account  |   NOT FOUND PASSWORD MODULE
+2023-06-28 10:29:43,820:ERROR:  Scenario: Adding/editing adress to my account  |   NOT FOUND PASSWORD MODULE
+2023-06-28 12:36:06,204:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANE
+2023-06-28 12:37:26,978:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANE
+2023-06-28 12:37:43,811:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANE
+2023-06-28 12:44:16,495:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANE
+2023-06-28 12:44:58,665:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DAE
+2023-06-28 12:47:49,824:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANEvcvvivcvvi
+2023-06-28 12:50:29,782:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANEyjldlyjldl
+2023-06-28 12:52:00,915:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANEpiyyypiyyywpcai
+2023-06-28 12:52:41,796:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANEvtqvqvtqvqocnkpocnkp
+2023-06-28 12:53:12,251:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANElxhxo  lxhxo  ggadv  ggadv
+2023-06-28 12:54:11,379:ERROR:  Scenario: Adding/editing adress to my account  |   NIEPOPRAWNE DANE
+2023-06-28 13:00:31,668:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY -  ENTERED NAME WAS: ughdp AND SAVED VALUE IS: ughdp AND ENTERED SUBNAME WAS: lufqh WHEN SAVED VALUE IS: lufqh
+2023-06-28 13:22:34,896:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-28 13:22:55,403:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-28 13:23:02,356:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-06-28 13:38:09,549:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY -  ENTERED NAME WAS: siboj AND SAVED VALUE IS: sibojewq AND ENTERED SUBNAME WAS: wlqru WHEN SAVED VALUE IS: wlqruasd
+2023-06-28 15:00:02,741:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY -  ENTERED NAME WAS: yysps AND SAVED VALUE IS: yysps ENTERED SUBNAME WAS: yqbjp AND SAVED VALUE IS: yqbjpuio
+2023-06-28 15:09:21,462:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-28 15:10:02,422:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
