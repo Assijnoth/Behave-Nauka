@@ -11,21 +11,29 @@ import time
 
 
 SITE_TEMP = SITE + "p/year-beige-grey-one-size"
+
+
 @given('browser run')
 def browser_run(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
-    context.driver.implicitly_wait(5)
+    context.driver.implicitly_wait(3)
 
 
 @when('go to ordered item productsite')
 def go_to_productsite(context):
     try:
         context.driver.get(SITE_TEMP)
+        try:
+            context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
+            logging.error("  Scenario: INPOST order                         |" + "   SITE IS 404")
+            context.driver.close()
+        except NoSuchElementException:
+            pass
     except:
-        logging.error("  Scenario: INPOST order                         |" + "   SITE NOT FOUND")
+        logging.error("  Scenario: DPD order                            |" + "   SITE NOT FOUND")
         context.driver.close()
-
 # KLIKA W BUTTON "DODAJ DO KOSZYKA"
+
 
 @then(u'moving item to cart')
 def moving_item_to_cart(context):
@@ -33,17 +41,13 @@ def moving_item_to_cart(context):
     try:
         cart.click()
     except NoSuchElementException:
-        try:
-            context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
-            logging.error("  Scenario: INPOST order                         |" + "   SITE IS 404")
-            context.driver.close()
-        except NoSuchElementException:
-            site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: INPOST order                         |"
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Scenario: INPOST order                         |"
                           + "   CAN'T ADD ITEM TO CART " + str(site_response))
-            context.driver.close()
+        context.driver.close()
 
 # KLIKA W BOXA Z POTWIERDZENIEM DODANIA DO KOSZYKA, A NASTĘPNIE OTWIERA KOSZYK I PRZECHODZI DO CHECKOUT
+
 
 @then('move to cart and confirm')
 def move_to_cart_and_confirm(context):
@@ -108,11 +112,13 @@ def complete_checkout_forms_then_confirm(context):
 
 @then('mark INPOST shipment')
 def mark_dpd_shipment(context):
+    inpost = context.driver.find_element(By.CSS_SELECTOR, "div.shipping-method-tile:nth-child(5)")
+    inpost_parcel = context.driver.find_element(By.CSS_SELECTOR, ".mt-xsm > span:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "div.shipping-method-tile:nth-child(5)").click()
+        inpost.click()
         try:
             time.sleep(1.5)
-            context.driver.find_element(By.CSS_SELECTOR, ".mt-xsm > span:nth-child(1)").click()
+            inpost_parcel.click()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
             logging.error("  Scenario: INPOST order                         |"
@@ -126,17 +132,23 @@ def mark_dpd_shipment(context):
 
 # WPISUJE KOD POCZTOWY, SZUKA PACZKOMATU, WYBIERA GO I ZAPISUJE WPROWADZONE DANE
 
+
 @then('fill INPOST delivery forms')
 def fill_inpost_delivery_forms(context):
+    parcel_postal_code = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+    find_parcel_by_code = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(4) "
+                                                                       "> span:nth-child(1)")
+    see_available_parcels = context.driver.find_element(By.CSS_SELECTOR, ".arrow-wrapper")
     try:
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").send_keys("47-400")
+        parcel_postal_code.clear()
+        parcel_postal_code.send_keys("47-400")
         try:
-            context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(4) > span:nth-child(1)").click()
+            find_parcel_by_code.click()
             try:
-                context.driver.find_element(By.CSS_SELECTOR, ".arrow-wrapper").click()
+                see_available_parcels.click()
                 context.driver.find_element(By.CSS_SELECTOR, "li.pointer:nth-child(1) > span:nth-child(1)").click()
-                context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(5) > span:nth-child(1)").click()
+                context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(5) > "
+                                                             "span:nth-child(1)").click()
             except NoSuchElementException:
                 site_response = requests.get(SITE, timeout=5)
                 logging.error("  Scenario: INPOST order                         |"
