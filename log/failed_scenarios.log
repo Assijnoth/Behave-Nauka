@@ -383,3 +383,35 @@
 2023-06-28 16:45:22,266:ERROR:  Scenario: INPOST order                         |   SITE IS 404
 2023-06-28 16:45:31,754:ERROR:  Scenario: INPOST order                         |   SITE IS 404
 2023-06-28 16:45:41,332:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:49:10,042:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-06-28 16:49:28,478:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-06-28 16:53:27,512:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
+2023-06-28 16:53:44,041:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
+2023-06-28 16:54:17,297:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
+2023-06-28 16:54:50,042:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
+2023-06-28 16:56:32,097:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-06-28 16:56:46,609:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-06-28 16:59:13,527:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-06-28 16:59:23,078:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-06-28 16:59:31,435:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-06-28 17:00:34,687:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
+2023-06-28 17:11:49,172:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 17:11:58,699:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 17:12:17,817:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:12:25,904:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:12:34,137:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:17:04,125:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:17:16,746:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:17:21,201:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
+2023-06-28 17:17:21,202:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daeeafd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
+2023-06-28 17:17:21,202:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daeeb810>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
+2023-06-28 17:17:21,203:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daef4350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
+2023-06-28 17:20:26,930:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:20:39,466:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:20:47,920:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:21:59,495:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
+2023-06-28 17:34:40,771:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
+2023-06-28 17:34:45,548:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
+2023-06-28 17:37:12,182:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
+2023-06-28 17:37:16,729:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
+2023-06-28 17:37:21,273:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND

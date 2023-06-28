@@ -10,7 +10,7 @@ import time
 # AKTUALNIE SCENARIUSZ DODAJE DO KOSZYKA PRZEDMIOT TESTOWY, DOCELOWO MA OBSŁUGIWAĆ ITEM Z DUŻYM STOCKIEM Z PACZKI BASIC
 
 
-SITE_TEMP = SITE + "p/test-przemke"
+SITE_TEMP = SITE + "p/year-beige-grey-one-size"
 @given('browser run')
 def browser_run(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
@@ -29,8 +29,9 @@ def go_to_productsite(context):
 
 @then(u'moving item to cart')
 def moving_item_to_cart(context):
+    cart = context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text").click()
+        cart.click()
     except NoSuchElementException:
         try:
             context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
@@ -46,12 +47,15 @@ def moving_item_to_cart(context):
 
 @then('move to cart and confirm')
 def move_to_cart_and_confirm(context):
+    add_to_cart_confirm = context.driver.find_element(By.CSS_SELECTOR, ".messages-container")
+    cart = context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile")
+    cookies_confirm = context.driver.find_element(By.CSS_SELECTOR, ".ch2-btn-text-xs")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".messages-container").click()
+        add_to_cart_confirm.click()
         time.sleep(0.5)
-        context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile").click()
+        cart.click()
         time.sleep(0.5)
-        context.driver.find_element(By.CSS_SELECTOR, ".ch2-btn-text-xs").click()
+        cookies_confirm.click()
         time.sleep(0.5)
         context.driver.find_element(By.CSS_SELECTOR, ".small").click()
     except NoSuchElementException:
@@ -60,26 +64,31 @@ def move_to_cart_and_confirm(context):
                       + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
         context.driver.close()
 
-# UZUPEŁNIA FORMULARZE I WCISKA "PRZEJDZ DO DOSTAWY"
-
 
 @then('complete checkout forms then confirm')
 def complete_checkout_forms_then_confirm(context):
+    email_input = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
+    name_input = context.driver.find_element_by_xpath("//input[@placeholder='Imię']")
+    subname_input = context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']")
+    address_input = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
+    postal_code_input = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+    city_input = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
+    phone_input = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
     try:
-        context.driver.find_element_by_xpath("//input[@placeholder='Email']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys("lazelab@test.com")
-        context.driver.find_element_by_xpath("//input[@placeholder='Imię']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Imię']").send_keys("Tester")
-        context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']").send_keys("DPD")
-        context.driver.find_element_by_xpath("//input[@placeholder='Adres']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Adres']").send_keys("Sezamkowa")
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").send_keys("47-400")
-        context.driver.find_element_by_xpath("//input[@placeholder='Miasto']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Miasto']").send_keys("Kraków")
-        context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").send_keys("123234345")
+        email_input.clear()
+        email_input.send_keys("lazelab@test.com")
+        name_input.clear()
+        name_input.send_keys("Tester")
+        subname_input.clear()
+        subname_input.send_keys("DPD")
+        address_input.clear()
+        address_input.send_keys("Sezamkowa")
+        postal_code_input.clear()
+        postal_code_input.send_keys("47-400")
+        city_input.clear()
+        city_input.send_keys("Kraków")
+        phone_input.clear()
+        phone_input.send_keys("123234345")
         try:
             context.driver.find_element(By.CSS_SELECTOR, ".btn-text").click()
         except:
