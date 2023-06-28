@@ -11,11 +11,11 @@ import requests
 @given('browser launch')
 def browser_launch(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
+    context.driver.implicitly_wait(3)
 
 
 @when('homepage open')
 def homepage_open(context):
-    context.driver.implicitly_wait(3)
     try:
         context.driver.get(SITE)
     except:
@@ -23,17 +23,14 @@ def homepage_open(context):
                       + "   SITE NOT FOUND")
         context.driver.close()
 
-# KLIKA W MEGAMENU
-
 
 @then('open megamenu')
 def browser_close(context):
+    megamenu = context.driver.find_element(By.CSS_SELECTOR, ".main-controller")
     try:
-        context.driver.implicitly_wait(3)
-        context.driver.find_element(By.CSS_SELECTOR, ".main-controller").click()
+        megamenu.click()
     except NoSuchElementException:
         try:
-            context.driver.implicitly_wait(3)
             context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
             logging.error("  Scenario: Is active category visible?          |"
                           + "   PWA HOMEPAGE IS 404")
@@ -50,13 +47,12 @@ def browser_close(context):
                 context.driver.close()
 
 
-# PRÓBUJE OTWORZYĆ SZUKANĄ KATEGORIĘ
-
 @then('check if active category appear in megamenu')
 def check_category_appear(context):
+    category = context.driver.find_element(By.CSS_SELECTOR, "div.mb-md:nth-child(15) > div:nth-child(2) > "
+                                                            "p:nth-child(1)")
     try:
-        context.driver.implicitly_wait(3)
-        context.driver.find_element(By.CSS_SELECTOR, "div.mb-md:nth-child(15) > div:nth-child(2) > p:nth-child(1)").is_displayed()
+        category.is_displayed()
     except NoSuchElementException:
         logging.error("  Scenario: Is active category visible?          |"
                       + "   NO ELEMENT IN MEGAMENU")

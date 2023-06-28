@@ -7,7 +7,6 @@ import time
 import requests
 import random
 
-
 randomizer = random.randint(15000, 30000)
 email = "usr" + str(randomizer) + "@gmail.com"
 password = "P@s$" + str(randomizer)
@@ -81,16 +80,15 @@ def fill_account_details(context):
         context.driver.close()
 
 
-
 @when('confirm consents')
 def step_impl(context):
     statute_consent = context.driver.find_element(By.CSS_SELECTOR, "div.newsletter-checkbox:nth-child(9) > "
-    "label:nth-child(1) > div:nth-child(1)")
+                                                                   "label:nth-child(1) > div:nth-child(1)")
     personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, ".login-body > div:nth-child(10) > "
-    "label:nth-child(1) > div:nth-child(1)")
+                                                                         "label:nth-child(1) > div:nth-child(1)")
     try:
-       statute_consent.click()
-       personal_data_consent.click()
+        statute_consent.click()
+        personal_data_consent.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: I can create new user                |"
@@ -101,7 +99,7 @@ def step_impl(context):
 @when('confirm creating account')
 def confirm_creating_account(context):
     create_account = context.driver.find_element(By.CSS_SELECTOR,
-    "button.button-basic:nth-child(12) > span:nth-child(1)")
+                                                 "button.button-basic:nth-child(12) > span:nth-child(1)")
     try:
         create_account.click()
     except NoSuchElementException:
@@ -109,8 +107,6 @@ def confirm_creating_account(context):
         logging.error("  Scenario: I can create new user                |"
                       + "   CAN'T CONFIRM SIGNIN " + str(site_response))
         context.driver.close()
-
-# DZIĘKUJEMY ZA ZAŁOŻENIE KONTA.is_displayed
 
 
 @when('check if creating account succesbox appear')
@@ -124,6 +120,7 @@ def check_if_creating_acc_is_success(context):
             "  Scenario: I can create new user                |   NOT FOUND CONFIRM BOX - ACCOUNT WAS NOT CREATED " +
             str(site_response))
         context.driver.close()
+
 
 # .messages-container
 

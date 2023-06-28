@@ -347,3 +347,39 @@
 2023-06-28 15:00:02,741:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY -  ENTERED NAME WAS: yysps AND SAVED VALUE IS: yysps ENTERED SUBNAME WAS: yqbjp AND SAVED VALUE IS: yqbjpuio
 2023-06-28 15:09:21,462:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-06-28 15:10:02,422:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-28 15:34:05,382:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-06-28 15:56:43,077:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE IS 404
+2023-06-28 15:56:49,332:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE IS 404
+2023-06-28 15:56:54,617:ERROR:  Scenario: Is active category visible?          |   PWA HOMEPAGE IS 404
+2023-06-28 15:59:37,139:ERROR:  Scenario: INPOST order                         |   PWA HOMEPAGE IS 404
+2023-06-28 15:59:42,708:ERROR:  Scenario: INPOST order                         |   PWA HOMEPAGE IS 404
+2023-06-28 15:59:47,591:ERROR:  Scenario: INPOST order                         |   PWA HOMEPAGE IS 404
+2023-06-28 16:08:58,250:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:09:05,899:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:09:11,340:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:11:24,144:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:11:39,140:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:14:54,619:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE NOT FOUND
+2023-06-28 16:15:47,031:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE NOT FOUND
+2023-06-28 16:23:26,829:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:23:31,423:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:23:35,944:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE IS 404
+2023-06-28 16:24:54,384:ERROR:  Scenario: INPOST order                         |   PRODUCT PAGE NOT FOUND
+2023-06-28 16:26:13,021:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:26:22,339:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:26:31,761:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:29:46,462:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:30:00,105:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:36:31,555:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:36:41,227:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:36:50,690:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:38:19,591:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:38:29,202:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:38:38,696:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:40:08,502:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:40:17,964:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:40:27,195:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:41:49,260:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:45:22,266:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:45:31,754:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-28 16:45:41,332:ERROR:  Scenario: INPOST order                         |   SITE IS 404
