@@ -3,16 +3,14 @@ import logging
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import random
 import time
 import requests
 import random
-import string
 
 
 randomizer = random.randint(15000,30000)
-email = "avs" + str(randomizer) + "@gmail.com"
-password = "@sA" + str(randomizer)
+email = "usr" + str(randomizer) + "@gmail.com"
+password = "P@s$" + str(randomizer)
 
 
 
