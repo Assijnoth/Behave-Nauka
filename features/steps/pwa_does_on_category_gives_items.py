@@ -16,11 +16,17 @@ def run_webdrivers(context):
 
 @when('open active category site')
 def open_active_category(context):
-    context.driver.implicitly_wait(5)
+    context.driver.implicitly_wait(3)
     try:
         context.driver.get(SITE_TEMP)
+        try:
+            context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
+            logging.error("  Scenario: Does enabled category return items?  |" + "   SITE IS 404")
+            context.driver.close()
+        except NoSuchElementException:
+            pass
     except:
-        logging.error("  Scenario: Is homepage 200?                     |" + "   SITE NOT FOUND")
+        logging.error("  Scenario: Does enabled category return items?  |" + "   SITE NOT FOUND")
         context.driver.close()
 
 
@@ -28,11 +34,10 @@ def open_active_category(context):
 
 @then('check if enabled category return items')
 def check_if_item_appear(context):
+    filter_button = context.driver.find_element(By.CSS_SELECTOR, ".small > span:nth-child(2)")
     try:
-        context.driver.implicitly_wait(3)
-        context.driver.find_element(By.CSS_SELECTOR, ".small > span:nth-child(2)").is_displayed()
+        filter_button.is_displayed()
     except NoSuchElementException:
-
         try:
             context.driver.implicitly_wait(3)
             context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()

@@ -9,7 +9,7 @@ import time
 
 # AKTUALNIE SCENARIUSZ DODAJE DO KOSZYKA PRZEDMIOT TESTOWY, DOCELOWO MA OBSŁUGIWAĆ ITEM Z DUŻYM STOCKIEM Z PACZKI BASIC
 
-SITE_TEMP = SITE + "p/test-przemke"
+SITE_TEMP = SITE + "p/year-beige-grey-one-size"
 
 
 @given('browser running')
@@ -22,39 +22,40 @@ def browser_running(context):
 def ordered_item_site(context):
     try:
         context.driver.get(SITE_TEMP)
-    except:
-        logging.error("  Scenario: DPD order                            |" + "   SITE NOT FOUND")
-        context.driver.close()
-
-# PRÓBUJE KLIKNĄĆ W BUTTON "DODAJ DO KOSZYKA"
-
-
-@then('adding item to cart')
-def adding_item_to_cart(context):
-    try:
-        context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text").click()
-    except NoSuchElementException:
         try:
             context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
             logging.error("  Scenario: DPD order                            |" + "   SITE IS 404")
             context.driver.close()
         except NoSuchElementException:
-            site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |"
+            pass
+    except:
+        logging.error("  Scenario: DPD order                            |" + "   SITE NOT FOUND")
+        context.driver.close()
+
+
+@then('adding item to cart')
+def adding_item_to_cart(context):
+    add_to_cart = context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text")
+    try:
+        add_to_cart.click()
+    except NoSuchElementException:
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Scenario: DPD order                            |"
                           + "   CAN'T ADD ITEM TO CART " + str(site_response))
-            context.driver.close()
+        context.driver.close()
 
-
-# KLIKA W BOXA Z POTWIERDZENIEM DODANIA DO KOSZYKA, A NASTĘPNIE OTWIERA KOSZYK I PRZECHODZI DO CHECKOUT
 
 @then('go to cart and confirm')
 def go_to_cart_and_confirm(context):
+    cart_confirm_box = context.driver.find_element(By.CSS_SELECTOR, ".messages-container")
+    cart = context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile")
+    cookies_confirm = context.driver.find_element(By.CSS_SELECTOR, ".ch2-btn-text-xs")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".messages-container").click()
+        cart_confirm_box.click()
         time.sleep(0.5)
-        context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile").click()
+        cart.click()
         time.sleep(0.5)
-        context.driver.find_element(By.CSS_SELECTOR, ".ch2-btn-text-xs").click()
+        cookies_confirm.click()
         time.sleep(0.5)
         context.driver.find_element(By.CSS_SELECTOR, ".small").click()
     except NoSuchElementException:
@@ -63,32 +64,37 @@ def go_to_cart_and_confirm(context):
                       + "   CAN'T PROCEED TO CHECKOUT " + str(site_response))
         context.driver.close()
 
-# UZUPEŁNIA FORMULARZE I WCISKA "PRZEJDZ DO DOSTAWY"
-
 
 @then('complete checkout forms and confirm')
 def complete_checkout_and_confirm(context):
+    email_input = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
+    name_input = context.driver.find_element_by_xpath("//input[@placeholder='Imię']")
+    subname_input = context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']")
+    address_input = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
+    postal_code_input = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+    city_input = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
+    phone_input = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
     try:
-        context.driver.find_element_by_xpath("//input[@placeholder='Email']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys("lazelab@test.com")
-        context.driver.find_element_by_xpath("//input[@placeholder='Imię']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Imię']").send_keys("Tester")
-        context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']").send_keys("DPD")
-        context.driver.find_element_by_xpath("//input[@placeholder='Adres']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Adres']").send_keys("Sezamkowa")
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']").send_keys("47-400")
-        context.driver.find_element_by_xpath("//input[@placeholder='Miasto']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Miasto']").send_keys("Kraków")
-        context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").clear()
-        context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']").send_keys("123234345")
+        email_input.clear()
+        email_input.send_keys("lazelab@test.com")
+        name_input.clear()
+        name_input.send_keys("Tester")
+        subname_input.clear()
+        subname_input.send_keys("DPD")
+        address_input.clear()
+        address_input.send_keys("Sezamkowa")
+        postal_code_input.clear()
+        postal_code_input.send_keys("47-400")
+        city_input.clear()
+        city_input.send_keys("Kraków")
+        phone_input.clear()
+        phone_input.send_keys("123234345")
         try:
             context.driver.find_element(By.CSS_SELECTOR, ".btn-text").click()
         except:
             site_response = requests.get(SITE, timeout=5)
-            logging.error("  Scenario: DPD order                            |" + "   CAN'T CONFIRM FORMS AND SITE IS: "
-                          + str(site_response))
+            logging.error("  Scenario: DPD order                            |" +
+                          "   CAN'T CONFIRM FORMS AND SITE IS: " + str(site_response))
             context.driver.close()
     except:
         site_response = requests.get(SITE, timeout=5)
@@ -96,14 +102,13 @@ def complete_checkout_and_confirm(context):
                       + "   CAN'T FILL CHECKOUT FORMS AND SITE IS: " + str(site_response))
         context.driver.close()
 
-
-# WYBIERA DPD I "PRZECHODZI DO PŁATNOŚCI"
-
+# Wybiera DPD i przechodzi do wyboru płatności
 
 @then('mark DPD shipment')
 def mark_dpd_shipment(context):
+    dpd = context.driver.find_element(By.CSS_SELECTOR, ".shipping-method-tile:nth-child(4)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".shipping-method-tile:nth-child(4)").click()
+        dpd.click()
         try:
             time.sleep(1.5)
             context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
@@ -118,13 +123,13 @@ def mark_dpd_shipment(context):
                       + "   CAN'T CHOOSE DPD SHIPMENT " + str(site_response))
         context.driver.close()
 
-# WYBIERA PAYU I "PRZECHODZI DO POTWIERDZENIA"
-
+# Wybiera PAYU i przechodzi do wyboru płatności
 
 @then('mark PayU Fast payment')
 def mark_payu_fast_payment(context):
+    payu_method = context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(7) > div:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(7) > div:nth-child(1)").click()
+        payu_method.click()
         try:
             time.sleep(1.5)
             context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
@@ -144,9 +149,12 @@ def mark_payu_fast_payment(context):
 
 @then('complete checkboxes')
 def complete_checkboxes(context):
+    statute_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)")
+    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > "
+                                                                         "div:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)").click()
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
+        statute_consent.click()
+        personal_data_consent.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
@@ -155,19 +163,18 @@ def complete_checkboxes(context):
 
 # PRZECHODZI DO PAYU SANDBOX
 
-
 @then('confirm checkout')
 def confirm_checkout(context):
+    confirm_and_pay = context.driver.find_element(By.CSS_SELECTOR, ".button-basic")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".button-basic").click()
+        confirm_and_pay.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   CAN'T COMPLETE CHECKOUT" + str(site_response))
         context.driver.close()
 
-
-# WYBIERA PŁATNOŚC BLIK -> POTWIERDZA -> LOGOUT
+# blik - > potwierdź -> logout / nie radzi sobie z lokalizacją w zmiennej
 
 @then('confirm payment on payu')
 def confirm_payment_payu(context):
@@ -184,8 +191,9 @@ def confirm_payment_payu(context):
 # SPRAWDZA CZY WYŚWIETLA SIĘ NAPIS Z POTWIERDZENIEM ZAMÓWIENIA
 @then('check if successpage appear')
 def check_successpage(context):
+    thanks_for_order = context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
+        thanks_for_order.is_displayed()
     except NoSuchElementException:
         logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
                       + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")
@@ -199,8 +207,9 @@ def close_test(context):
 
 @then('mark PayU Card payment')
 def mark_payu_card(context):
+    payu_card_method = context.driver.find_element(By.CSS_SELECTOR, ".mt-xsm > span:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".mt-xsm > span:nth-child(1)").click()
+        payu_card_method.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: DPD order (BY CARD)                  |"
@@ -238,9 +247,12 @@ def complete_card_informations(context):
 
 @then('fill checkboxes')
 def fill_checkboxes(context):
+    statute_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)")
+    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > "
+                                                                         "div:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)").click()
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
+        statute_consent.click()
+        personal_data_consent.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: DPD order (BY CARD)                  |"
@@ -250,8 +262,9 @@ def fill_checkboxes(context):
 
 @then('finish checkout')
 def finish_checkout(context):
+    confirm_and_pay = context.driver.find_element(By.CSS_SELECTOR, ".button-basic")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".button-basic").click()
+        confirm_and_pay.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
@@ -261,8 +274,9 @@ def finish_checkout(context):
 
 @then('check successpage status')
 def check_successpage_status(context):
+    thanks_for_order = context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
+        thanks_for_order.is_displayed()
     except NoSuchElementException:
         logging.error("  Scenario: DPD order (BY CARD)                  |"
                       + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")

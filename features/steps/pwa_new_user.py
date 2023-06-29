@@ -122,8 +122,6 @@ def check_if_creating_acc_is_success(context):
         context.driver.close()
 
 
-# .messages-container
-
 @then('test ending')
 def test_ending(context):
     context.driver.close()

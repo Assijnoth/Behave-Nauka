@@ -380,103 +380,41 @@
 2023-06-28 16:40:17,964:ERROR:  Scenario: INPOST order                         |   SITE IS 404
 2023-06-28 16:40:27,195:ERROR:  Scenario: INPOST order                         |   SITE IS 404
 2023-06-28 16:41:49,260:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 16:45:22,266:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 16:45:31,754:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 16:45:41,332:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 16:49:10,042:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-06-28 16:49:28,478:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-06-28 16:53:27,512:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
-2023-06-28 16:53:44,041:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
-2023-06-28 16:54:17,297:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
-2023-06-28 16:54:50,042:ERROR:  Scenario: Is homepage 200?                     |   PWA HAS NOT 404 ELEMENT, AND SITE STATUS IS <Response [200]>
-2023-06-28 16:56:32,097:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-06-28 16:56:46,609:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
-2023-06-28 16:59:13,527:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
-2023-06-28 16:59:23,078:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
-2023-06-28 16:59:31,435:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
-2023-06-28 17:00:34,687:ERROR:  Scenario: Does enabled category return items?  |   NO ITEMS AND CATEGORY SITE HAVE STATUS: <Response [200]>
-2023-06-28 17:11:49,172:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:11:58,699:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:12:17,817:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:12:25,904:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:12:34,137:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:17:04,125:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:17:16,746:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:17:21,201:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:17:21,202:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daeeafd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
-2023-06-28 17:17:21,202:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daeeb810>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
-2023-06-28 17:17:21,203:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f73daef4350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/11e60917-0840-4659-88e6-58364d21ff05/window
-2023-06-28 17:20:26,930:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:20:39,466:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:20:47,920:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:21:59,495:ERROR:  Scenario: INPOST order                         |   CAN'T FILL CHECKOUT FORMS AND SITE IS: <Response [200]>
-2023-06-28 17:34:40,771:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:34:45,548:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:37:12,182:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:37:16,729:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:37:21,273:ERROR:  Scenario: INPOST order                         |   SITE NOT FOUND
-2023-06-28 17:43:19,940:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:43:24,547:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:43:29,387:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:45:02,999:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 17:45:07,736:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 17:45:12,534:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 17:53:35,503:ERROR:  Scenario: INPOST order                         |   SITE IS 404
-2023-06-28 17:53:47,063:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 17:53:52,075:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 17:58:42,366:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 18:00:24,133:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 18:00:24,134:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbe057dca50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eb9db69a-4415-4690-8370-686d3b4172fd/window
-2023-06-28 18:00:24,134:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbe057dd210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eb9db69a-4415-4690-8370-686d3b4172fd/window
-2023-06-28 18:00:24,135:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbe057ddd50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eb9db69a-4415-4690-8370-686d3b4172fd/window
-2023-06-28 18:01:45,772:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 18:01:50,377:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-28 18:01:50,378:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e85ddf490>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d98f55f8-b9af-4c29-9eec-0aed1a067241/window
-2023-06-28 18:01:50,378:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e85ddfd10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d98f55f8-b9af-4c29-9eec-0aed1a067241/window
-2023-06-28 18:01:50,379:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e85dec850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d98f55f8-b9af-4c29-9eec-0aed1a067241/window
-2023-06-29 06:08:22,379:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:11:42,307:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:11:42,308:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f29957b7d50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5a3c147b-8d1f-43cc-8d23-a97f30f2d403/window
-2023-06-29 06:11:42,309:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f29957c4590>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5a3c147b-8d1f-43cc-8d23-a97f30f2d403/window
-2023-06-29 06:11:42,309:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f29957c50d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5a3c147b-8d1f-43cc-8d23-a97f30f2d403/window
-2023-06-29 06:11:58,287:ERROR:  Scenario: INPOST order                         |   CAN'T PICK PARCEL LOCKER <Response [200]>
-2023-06-29 06:12:14,421:ERROR:  Scenario: INPOST order                         |   CAN'T PICK PARCEL LOCKER <Response [200]>
-2023-06-29 06:12:22,199:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:12:22,199:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb9487c53d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa932559-6365-42e5-80b2-be0600f66130/window
-2023-06-29 06:12:22,200:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb9487c5c50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa932559-6365-42e5-80b2-be0600f66130/window
-2023-06-29 06:12:22,200:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb9487c6790>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa932559-6365-42e5-80b2-be0600f66130/window
-2023-06-29 06:16:49,931:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:16:49,932:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe24b18d5d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c4c97458-7c17-4d2b-b71d-0123f98b4540/window
-2023-06-29 06:16:49,933:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe24b181010>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c4c97458-7c17-4d2b-b71d-0123f98b4540/window
-2023-06-29 06:16:49,933:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe24b182890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c4c97458-7c17-4d2b-b71d-0123f98b4540/window
-2023-06-29 06:19:46,386:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:19:46,387:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0ec0f90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0626b0f2-8e35-4cef-b241-9fa6cde57226/window
-2023-06-29 06:19:46,387:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0ec17d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0626b0f2-8e35-4cef-b241-9fa6cde57226/window
-2023-06-29 06:19:46,388:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0ec22d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0626b0f2-8e35-4cef-b241-9fa6cde57226/window
-2023-06-29 06:19:50,003:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:19:50,004:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0d74350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5cec534d-21fb-4dc4-b9bb-9051a6d640fa/window
-2023-06-29 06:19:50,004:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0d74bd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5cec534d-21fb-4dc4-b9bb-9051a6d640fa/window
-2023-06-29 06:19:50,004:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbba0d756d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5cec534d-21fb-4dc4-b9bb-9051a6d640fa/window
-2023-06-29 06:20:37,571:ERROR:  Scenario: DPD order (FAST PAYMENT)             |   THERE'S NO SUCCESSPAGE AFTER PAYMENT
-2023-06-29 06:21:36,260:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:21:36,261:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3cb5210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d28e4351-b2a6-49cf-99d5-e2ec5b7892ad/window
-2023-06-29 06:21:36,261:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3cb5a10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d28e4351-b2a6-49cf-99d5-e2ec5b7892ad/window
-2023-06-29 06:21:36,261:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3cb6550>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d28e4351-b2a6-49cf-99d5-e2ec5b7892ad/window
-2023-06-29 06:21:39,748:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:21:39,748:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3b4e890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0d73de2a-da0b-4b92-9d83-9a0b4827df9d/window
-2023-06-29 06:21:39,749:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3b4efd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0d73de2a-da0b-4b92-9d83-9a0b4827df9d/window
-2023-06-29 06:21:39,749:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f85a3b4fad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0d73de2a-da0b-4b92-9d83-9a0b4827df9d/window
-2023-06-29 06:23:25,187:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:23:25,187:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa5a64c0850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6cef46dc-55ae-4305-ba3a-aadbf37aa7e5/window
-2023-06-29 06:23:25,188:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa5a64c1050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6cef46dc-55ae-4305-ba3a-aadbf37aa7e5/window
-2023-06-29 06:23:25,188:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa5a64c1b90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6cef46dc-55ae-4305-ba3a-aadbf37aa7e5/window
-2023-06-29 06:26:12,861:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:26:19,313:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:27:42,254:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:27:42,255:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae739690>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/cae5cd7c-3edd-44b5-a7a5-826488d31c69/window
-2023-06-29 06:27:42,255:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae739ed0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/cae5cd7c-3edd-44b5-a7a5-826488d31c69/window
-2023-06-29 06:27:42,255:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae73aa10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/cae5cd7c-3edd-44b5-a7a5-826488d31c69/window
-2023-06-29 06:27:45,706:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
-2023-06-29 06:27:45,707:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae5d69d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a49f4e83-dc62-4f0d-971a-b905b8586500/window
-2023-06-29 06:27:45,707:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae5d7210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a49f4e83-dc62-4f0d-971a-b905b8586500/window
-2023-06-29 06:27:45,707:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f80ae5d7cd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a49f4e83-dc62-4f0d-971a-b905b8586500/window
+
+2023-06-29 06:59:02,268:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-29 06:59:06,996:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-29 06:59:11,488:ERROR:  Scenario: INPOST order                         |   SITE IS 404
+2023-06-29 06:59:22,343:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
+2023-06-29 06:59:27,119:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
+2023-06-29 06:59:31,741:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
+2023-06-29 07:02:13,515:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-06-29 07:02:32,261:ERROR:  Scenario: Is off category 404?                 |   SITE NOT FOUND
+2023-06-29 07:04:42,019:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND
+2023-06-29 07:06:25,600:ERROR:  Scenario: Is active category visible?          |   SITE IS 404
+2023-06-29 07:07:19,566:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND
+2023-06-29 07:10:41,344:ERROR:  Scenario: Is active category visible?          |   SITE NOT FOUND
+2023-06-29 07:10:51,724:ERROR:  Scenario: Is active category visible?          |   SITE IS 404
+2023-06-29 07:12:40,228:ERROR:  Scenario: I can create new user                |   SITE NOT FOUND
+2023-06-29 07:14:28,314:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-29 07:14:36,144:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-06-29 07:14:39,518:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-06-29 07:14:44,199:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-06-29 07:14:48,804:ERROR:  Scenario: Signin with various logins           |   SITE NOT FOUND
+2023-06-29 07:15:03,019:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-06-29 07:15:11,226:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-06-29 07:16:19,656:ERROR:  Scenario: Is homepage 200?                     |   SITE NOT FOUND
+2023-06-29 07:16:29,085:ERROR:  Scenario: Is homepage 200?                     |   PWA HOMEPAGE IS 404
+2023-06-29 07:20:16,135:ERROR:  Scenario: DPD order                            |   SITE IS 404
+2023-06-29 07:20:20,864:ERROR:  Scenario: DPD order                            |   SITE IS 404
+2023-06-29 07:20:35,916:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
+2023-06-29 07:20:40,563:ERROR:  Scenario: DPD order                            |   SITE NOT FOUND
+2023-06-29 07:49:05,519:ERROR:  Scenario: Does enabled category return items?  |   SITE IS 404
+2023-06-29 07:49:15,436:ERROR:  Scenario: Does enabled category return items?  |   SITE NOT FOUND
+2023-06-29 08:28:34,814:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:29:03,786:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:30:21,291:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:30:38,667:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:35:22,255:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:36:03,362:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:36:37,068:ERROR:  Can I add and then remove item from cart?      |
+2023-06-29 08:48:42,813:ERROR:  Can I add and then remove item from cart?      | CART IS NOT EMPTY

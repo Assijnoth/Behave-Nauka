@@ -10,6 +10,7 @@ def open_browser(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
     context.driver.implicitly_wait(3)
 
+
 @when('open site homepage')
 def open_site_homepage(context):
     try:
@@ -17,9 +18,6 @@ def open_site_homepage(context):
     except:
         logging.error("  Scenario: Signin with various logins           |" + "   SITE NOT FOUND")
         context.driver.close()
-
-
-# OTWIERA ELEMENT MOJE KONTO
 
 
 @then('go to login section')

@@ -23,9 +23,6 @@ def open_of_category_page(context):
         context.driver.close()
 
 
-# SZUKA NAPISU 404
-
-
 @then('check if 404 error will show up')
 def check_if_category_is_404(context):
     try:

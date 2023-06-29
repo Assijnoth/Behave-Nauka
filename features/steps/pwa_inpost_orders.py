@@ -15,7 +15,7 @@ SITE_TEMP = SITE + "p/year-beige-grey-one-size"
 @given('browser run')
 def browser_run(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
-    context.driver.implicitly_wait(2)
+    context.driver.implicitly_wait(5)
 
 
 @when('go to ordered item productsite')
@@ -29,15 +29,15 @@ def go_to_productsite(context):
         except NoSuchElementException:
             pass
     except:
-        logging.error("  Scenario: DPD order                            |" + "   SITE NOT FOUND")
+        logging.error("  Scenario: INPOST order                         |" + "   SITE NOT FOUND")
         context.driver.close()
 
 
-@then(u'moving item to cart')
+@then('moving item to cart')
 def moving_item_to_cart(context):
-    cart = context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text")
+    add_to_cart = context.driver.find_element(By.CSS_SELECTOR, ".f-grow > .btn-text")
     try:
-        cart.click()
+        add_to_cart.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order                         |"
@@ -165,7 +165,6 @@ def fill_inpost_delivery_forms(context):
         context.driver.close()
 
 
-
 @then('proceed to picking payment methods')
 def proceed_to_picking_payment_methods(context):
     try:
@@ -206,7 +205,8 @@ def choose_payu_fast_payment(context):
 @then('confirm marketing consents')
 def confirm_marketing_consents(context):
     statute_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)")
-    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)")
+    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > "
+                                                                         "div:nth-child(1)")
     try:
         statute_consent.click()
         personal_data_consent.click()
@@ -228,15 +228,15 @@ def end_checkout(context):
                       + "   CAN'T COMPLETE CHECKOUT" + str(site_response))
         context.driver.close()
 
+# blik - > potwierdź -> logout / nie radzi sobie z lokalizacją w zmiennej
+
 
 @then('complete payment on payu')
 def complete_payment_on_payu(context):
-    confirm_blik = context.driver.find_element(By.CSS_SELECTOR, "#formSubmit")
-    payu_logout = context.driver.find_element(By.CSS_SELECTOR, "#btnLogout")
     try:
         context.driver.find_element(By.CSS_SELECTOR, "div.button-like").click()
-        confirm_blik.click()
-        payu_logout.click()
+        context.driver.find_element(By.CSS_SELECTOR, "#formSubmit").click()
+        context.driver.find_element(By.CSS_SELECTOR, "#btnLogout").click()
     except NoSuchElementException:
         logging.error("  Scenario: INPOST order (FAST PAYMENT)          |"
                       + "   CAN'T CONFIRM PAYMENT ON PAYU SITE")
@@ -263,9 +263,11 @@ def test_is_done(context):
 
 @then('choose PayU Card payment')
 def choose_payu_card(context):
+    payu_card_method = context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(9) > "
+                                                                    "div:nth-child(2) > button:nth-child(1) > "
+                                                                    "span:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(9) > div:nth-child(2)"
-                                                     " > button:nth-child(1) > span:nth-child(1)").click()
+        payu_card_method.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY CARD)               |"
@@ -303,9 +305,12 @@ def fill_card_informations(context):
 
 @then('fill marketing consents')
 def fill_marketing_consents(context):
+    statute_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)")
+    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > "
+                                                                         "div:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)").click()
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
+        statute_consent.click()
+        personal_data_consent.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY CARD)               |"
@@ -315,8 +320,9 @@ def fill_marketing_consents(context):
 
 @then('checkout finish')
 def checkout_finish(context):
+    confirm_and_pay = context.driver.find_element(By.CSS_SELECTOR, ".btn-primary")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
+        confirm_and_pay.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY CARD)               |"
@@ -326,10 +332,11 @@ def checkout_finish(context):
 
 @then('see if successpage is displayed')
 def step_impl(context):
+    thanks_for_order = context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
+        thanks_for_order.is_displayed()
     except NoSuchElementException:
-        logging.error("  Scenario: DPD order (FAST PAYMENT)             |"
+        logging.error("  Scenario: INPOST order (BY CARD)               |"
                       + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")
         context.driver.close()
 
@@ -341,11 +348,13 @@ def test_is_end(context):
 
 @then('choose COD payment')
 def choose_cod_payment(context):
+    cod_method = context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(8)")
+    go_to_consents = context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "div.payment-method-tile:nth-child(8)").click()
+        cod_method.click()
         try:
             time.sleep(1.5)
-            context.driver.find_element(By.CSS_SELECTOR, ".mt-sm > span:nth-child(1)").click()
+            go_to_consents.click()
         except NoSuchElementException:
             site_response = requests.get(SITE, timeout=5)
             logging.error("  Scenario: INPOST order (FAST PAYMENT)          |"
@@ -360,9 +369,12 @@ def choose_cod_payment(context):
 
 @then('complete marketing consents')
 def complete_marketing_consents(context):
+    statute_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)")
+    personal_data_consent = context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > "
+                                                                         "div:nth-child(1)")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(1) > div:nth-child(1)").click()
-        context.driver.find_element(By.CSS_SELECTOR, "label.pointer:nth-child(2) > div:nth-child(1)").click()
+        statute_consent.click()
+        personal_data_consent.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY COD)                |"
@@ -372,8 +384,9 @@ def complete_marketing_consents(context):
 
 @then('complete checkout')
 def checkout_finish(context):
+    confirm_and_pay = context.driver.find_element(By.CSS_SELECTOR, ".btn-primary")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
+        confirm_and_pay.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Scenario: INPOST order (BY COD)                |"
@@ -383,8 +396,9 @@ def checkout_finish(context):
 
 @then('check if successpage is displayed')
 def check_if_successpage_is_displayed(context):
+    thanks_for_order = context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "h2.mb-sm").is_displayed()
+        thanks_for_order.is_displayed()
     except NoSuchElementException:
         logging.error("  Scenario: INPOST order (BY COD)                |"
                       + "   THERE'S NO SUCCESSPAGE AFTER PAYMENT")

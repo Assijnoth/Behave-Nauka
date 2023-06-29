@@ -20,8 +20,6 @@ def open_homepage(context):
         logging.error("  Scenario: Is homepage 200?                     |" + "   SITE NOT FOUND")
         context.driver.close()
 
-# SZUKA NAPISU 404
-
 
 @then('check if 404 error will appear')
 def check_if_homepage_is_404(context):

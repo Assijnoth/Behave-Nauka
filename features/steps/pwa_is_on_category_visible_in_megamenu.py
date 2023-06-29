@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import requests
 
+
 # AKTUALNIE SCENARIUSZ SZUKA KATEGORII SKARPETKI - DO ZMIANY, ABY WYSZUKIWAŁ KAT. Z PACZKI BASIC
 
 
@@ -18,9 +19,14 @@ def browser_launch(context):
 def homepage_open(context):
     try:
         context.driver.get(SITE)
+        try:
+            context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
+            logging.error("  Scenario: Is active category visible?          |" + "   SITE IS 404")
+            context.driver.close()
+        except NoSuchElementException:
+            pass
     except:
-        logging.error("  Scenario: Is active category visible?          |"
-                      + "   SITE NOT FOUND")
+        logging.error("  Scenario: Is active category visible?          |" + "   SITE NOT FOUND")
         context.driver.close()
 
 
@@ -30,21 +36,10 @@ def browser_close(context):
     try:
         megamenu.click()
     except NoSuchElementException:
-        try:
-            context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
-            logging.error("  Scenario: Is active category visible?          |"
-                          + "   PWA HOMEPAGE IS 404")
-            context.driver.close()
-        except NoSuchElementException:
-            site_response = requests.get(SITE, timeout=5)
-            if site_response.status_code == 200:
-                logging.error("  Scenario: Is active category visible?          |"
-                              + "   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS 200")
-                context.driver.close()
-            else:
-                logging.error("  Scenario: Is active category visible?          |"
-                              + "   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS " + str(site_response))
-                context.driver.close()
+        site_response = requests.get(SITE, timeout=5)
+        logging.error("  Scenario: Is active category visible?          |"
+                      + "   PWA HOMEPAGE HAS NO MEGAMENU, AND SITE STATUS IS " + str(site_response))
+        context.driver.close()
 
 
 @then('check if active category appear in megamenu')

@@ -8,13 +8,14 @@ import requests
 
 # AKTUALNIE SCENARIUSZ DODAJE DO KOSZYKA PRZEDMIOT TESTOWY, DOCELOWO MA ODWIEDZIC KATEGORIĘ PACZKI BASIC
 
-SITE_TEMP = SITE + "p/test-przemke"
+SITE_TEMP = SITE + "p/gaja-white-36"
 
 
 @given('running browser')
 def browser_run(context):
     context.driver = BROWSERS[BROWSER_NAME]["class"](executable_path=BROWSERS[BROWSER_NAME]["exec_path"])
     context.driver.implicitly_wait(3)
+
 
 @when('open item site')
 def open_item_site(context):
@@ -29,8 +30,9 @@ def open_item_site(context):
 
 @then('add item to cart')
 def add_item_to_cart(context):
+    add_to_cart = context.driver.find_element(By.CSS_SELECTOR, "button.f-grow")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "button.f-grow").click()
+        add_to_cart.click()
     except NoSuchElementException:
         try:
             context.driver.find_element(By.CSS_SELECTOR, ".error-txt").is_displayed()
@@ -46,48 +48,50 @@ def add_item_to_cart(context):
 # KLIKA W BOXA Z POTWIERDZENIEM DODANIA DO KOSZYKA, A NASTĘPNIE OTWIERA KOSZYK
 @then('open cart')
 def open_cart(context):
+    cart_confirm_box = context.driver.find_element(By.CSS_SELECTOR, ".messages-container")
+    cart = context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".messages-container").click()
-        context.driver.find_element(By.CSS_SELECTOR, ".icon-cart-mobile").click()
+        cart_confirm_box.click()
+        cart.click()
     except NoSuchElementException:
         site_response = requests.get(SITE, timeout=5)
         logging.error("  Can I add and then remove item from cart?      |"
                       + "   CAN'T OPEN CART " + str(site_response))
         context.driver.close()
 
-# SPRAWDZA, CZY KAFELEK Z ITEMEM POJAWIŁ SIĘ W KOSZU
-
 
 @then('check if item is in cart')
 def check_item_in_cart(context):
+    product_tile_in_cart = context.driver.find_element(By.CSS_SELECTOR, ".product-tile-name")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".product-tile-name").is_displayed()
+        product_tile_in_cart.is_displayed()
     except NoSuchElementException:
         logging.error("  Can I add and then remove item from cart?      |"
                       + "   ITEM IS NOT IN CART")
         context.driver.close()
 
 
-# SZUKA BUTTONA "..." A NASTĘPNIE BUTTONA "USUŃ"
 @then('remove item from cart')
 def remove_item(context):
+    three_dots = context.driver.find_element(By.CSS_SELECTOR, ".ellipsis")
     try:
-        context.driver.find_element(By.CSS_SELECTOR, ".ellipsis").click()
+        three_dots.click()
+        remove_from_cart = context.driver.find_element(By.CSS_SELECTOR, "div.basic-link:nth-child(2)")
+        remove_from_cart.click()
     except NoSuchElementException:
         logging.error("  Can I add and then remove item from cart?      |"
                       + "   CANT REMOVE ITEM FROM CART")
         context.driver.close()
-    context.driver.find_element(By.CSS_SELECTOR, "div.basic-link:nth-child(2)").click()
 
 
-# SZUKA ELEMENTU "PRZENIEŚ DO ULUBIONYCH"
 @then('check if item was removed from cart')
 def remove_item_check(context):
     try:
-        context.driver.find_element(By.CSS_SELECTOR, "div.basic-link:nth-child(1)").is_displayed()
+        three_dots = context.driver.find_element(By.CSS_SELECTOR, ".ellipsis")
+        three_dots.is_displayed()
         context.driver.close()
-        logging.error("  Can I add and then remove item from cart?      |")
-    except:
+        logging.error("  Can I add and then remove item from cart?      | CART IS NOT EMPTY")
+    except NoSuchElementException:
         pass
 
 
