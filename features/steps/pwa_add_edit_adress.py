@@ -18,6 +18,12 @@ login = "noworyta@outlook.com"
 password = "SdH3swhLbD6P6w@!@#"
 random_name = randomizer(5)
 random_subname = randomizer(5)
+random_email = randomizer(5)
+random_address = randomizer(5)
+random_postal = random.randint(10000,30000)
+random_city = randomizer(5)
+random_phone = randomizer(5)
+
 
 
 @given('running webdrivers')
@@ -35,13 +41,14 @@ def visit_homepage(context):
         context.driver.close()
 
 
-# MOJE KONTO.click
 
 @then('go to login panel')
 def go_to_login_panel(context):
     my_account = context.driver.find_element(By.CSS_SELECTOR, ".btn-icons-h")
+    cookies_confirm = context.driver.find_element(By.CSS_SELECTOR, ".ch2-btn-text-xs")
     try:
         my_account.click()
+        cookies_confirm.click()
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND LOGIN MODULE")
         context.driver.close()
@@ -129,12 +136,35 @@ def save_it_and_compare(context):
 
 @then('fill delivery data')
 def fill_delivery_data(context):
-    pass
+    delivery_email = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
+    delivery_name = context.driver.find_element_by_xpath("//input[@name='input-199']")
+    delivery_subname = context.driver.find_element_by_xpath("//input[@name='input-862']")
+    delivery_address = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
+    delivery_phone = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
+    try:
+        delivery_email.clear()
+        delivery_email.send_keys(random_email)
+        delivery_name.clear(random_name)
+        delivery_name.send_keys(random_name)
+        delivery_subname.clear(random_name)
+        delivery_subname.send_keys(random_name)
+        delivery_address.clear(random_address)
+        delivery_address.send_keys(random_address)
+        delivery_phone.clear()
+        delivery_phone.send_keys(random_phone)
+    except NoSuchElementException:
+        logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND PASSWORD MODULE")
+        context.driver.close()
 
 
 @then('save it and compare too')
 def save_it_and_compare_too(context):
-    pass
+    try:
+        logout_button = context.driver.find_element(By.CSS_SELECTOR, "div.menu-select-btn:nth-child(3)").is_displayed()
+        assert logout_button is True
+    except NoSuchElementException:
+        logging.error("  Scenario: Adding/editing address to my account |   INVALID LOGIN/PASSWORD")
+        context.driver.close()
 
 
 @then('end that test')

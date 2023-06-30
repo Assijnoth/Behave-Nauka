@@ -90,7 +90,7 @@ def remove_item_check(context):
         three_dots = context.driver.find_element(By.CSS_SELECTOR, ".ellipsis")
         three_dots.is_displayed()
         context.driver.close()
-        logging.error("  Can I add and then remove item from cart?      | CART IS NOT EMPTY")
+        logging.error("  Can I add and then remove item from cart?      |   CART IS NOT EMPTY")
     except NoSuchElementException:
         pass
 
