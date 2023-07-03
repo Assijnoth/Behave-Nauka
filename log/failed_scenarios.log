@@ -445,3 +445,6 @@
 2023-07-03 16:49:38,206:ERROR:  Scenario: Adding/editing adress to my account  |   USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):  NAME / bnnpa / bnnpa ; SUBNAME / hkirv / hkirv ; EMAIL / bzlhq@gmail.com / bzlhq@gmail.com ; ADDRESS / pdndd / pdndd ; PHONE / 239416183 / 239416183 ; POSTAL / 47-283 / 47-283
 2023-07-03 16:50:30,160:ERROR:  Scenario: Adding/editing adress to my account  |   USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):  NAME / upyqu / upyqu ; SUBNAME / gjxoh / gjxoh ; EMAIL / kesxd@gmail.com / kesxd@gmail.com ; ADDRESS / yxeru / yxeru ; PHONE / 204064412 / 204064412 ; POSTAL / 47-127 / 47-127 ; CITY / yxeru / yxerus
 2023-07-03 16:51:16,832:ERROR:  Scenario: Adding/editing adress to my account  |   USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):    NAME / vbwto / vbwto ; SUBNAME / jxgtu / jxgtu ; EMAIL / ucydk@gmail.com / ucydk@gmail.com ; ADDRESS / gciic / gciics ; PHONE / 280964873 / 280964873 ; POSTAL / 47-192 / 47-192 ; CITY / gciic / gciics
+2023-07-03 17:16:48,061:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA
+2023-07-03 17:17:04,016:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA
+2023-07-03 17:19:01,577:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA

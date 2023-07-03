@@ -121,17 +121,29 @@ def fill_user_data(context):
 def save_it_and_compare(context):
     user_name = context.driver.find_element_by_xpath("//input[@placeholder='Imię']")
     user_subname = context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']")
+    save_button = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(6)")
     try:
-        user_name_value = user_name.get_attribute('value')
-        user_subname_value = user_subname.get_attribute('value')
-        if user_name_value == random_name and user_subname_value == random_subname:
-            pass
-        else:
-            logging.error("  Scenario: Adding/editing adress to my account  |   "
-                          "USER DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
-                          "   NAME / " + random_name + " / " + user_name_value +
-                          " ; SUBNAME / " + random_subname + " / " + user_subname_value)
+        my_data = context.driver.find_element(By.CSS_SELECTOR,
+                                              "div.menu-select-btn:nth-child(3) > div:nth-child(1)")
+        save_button.click()
+        time.sleep(1)
+        context.driver.refresh()
+        time.sleep(1)
+        my_data.click()
+        try:
+            user_name_value = user_name.get_attribute('value')
+            user_subname_value = user_subname.get_attribute('value')
+            if user_name_value == random_name and user_subname_value == random_subname:
+                pass
+            else:
+                logging.error("  Scenario: Adding/editing adress to my account  |   "
+                              "USER DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
+                              "   NAME / " + random_name + " / " + user_name_value +
+                              " ; SUBNAME / " + random_subname + " / " + user_subname_value)
+                context.driver.close()
+        except:
             context.driver.close()
+
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA")
         context.driver.close()
