@@ -10,7 +10,7 @@ import time
 
 def randomizer(size):
     random_string = ''.join([random.choice(string.ascii_lowercase)
-        for n in range(size)])
+                             for n in range(size)])
     return random_string
 
 
@@ -18,12 +18,11 @@ login = "noworyta@outlook.com"
 password = "SdH3swhLbD6P6w@!@#"
 random_name = randomizer(5)
 random_subname = randomizer(5)
-random_email = randomizer(5)
+random_email = randomizer(5) + "@gmail.com"
 random_address = randomizer(5)
-random_postal = random.randint(10000,30000)
+random_postal = "47-" + str(random.randint(100, 300))
 random_city = randomizer(5)
-random_phone = randomizer(5)
-
+random_phone = random.randint(100000000, 300000000)
 
 
 @given('running webdrivers')
@@ -36,10 +35,9 @@ def running_webdrivers(context):
 def visit_homepage(context):
     try:
         context.driver.get(SITE)
-    except:
+    except Exception:
         logging.error("  Scenario: Adding/editing address to my account |" + "   SITE NOT FOUND")
         context.driver.close()
-
 
 
 @then('go to login panel')
@@ -52,6 +50,7 @@ def go_to_login_panel(context):
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND LOGIN MODULE")
         context.driver.close()
+
 
 # EMAIL, PASSWORD.send_keys and zaloguj.click
 
@@ -71,6 +70,7 @@ def enter_account_informations(context):
         logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND PASSWORD MODULE")
         context.driver.close()
 
+
 # Check if LOGOUT is available
 
 
@@ -82,6 +82,7 @@ def check_if_login_is_correct(context):
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing address to my account |   INVALID LOGIN/PASSWORD")
         context.driver.close()
+
 
 # Moje dane.click
 
@@ -96,7 +97,8 @@ def go_to_mydata(context):
         logging.error("  Scenario: Adding/editing address to my account |   NO MY DATA MODULE IN MY ACCOUNT MENU")
         context.driver.close()
 
-# imię, nazwisko.fill  płeć.click
+
+# imię, nazwisko.fill
 
 
 @then('fill user data')
@@ -125,48 +127,88 @@ def save_it_and_compare(context):
         if user_name_value == random_name and user_subname_value == random_subname:
             pass
         else:
-            logging.error("  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY - " +
-                          " ENTERED NAME WAS: " + random_name + " AND SAVED VALUE IS: " + user_name_value +
-                          " ENTERED SUBNAME WAS: " + random_subname + " AND SAVED VALUE IS: " + user_subname_value)
+            logging.error("  Scenario: Adding/editing adress to my account  |   "
+                          "USER DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
+                          "   NAME / " + random_name + " / " + user_name_value +
+                          " ; SUBNAME / " + random_subname + " / " + user_subname_value)
             context.driver.close()
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA")
         context.driver.close()
 
 
+# w moje konto dublują się placeholdery, dlatego wykorzystuję find_by_elementS i wskazuję na konkretny element
+# tablicy
+
+
 @then('fill delivery data')
 def fill_delivery_data(context):
     delivery_email = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
-    delivery_name = context.driver.find_element_by_xpath("//input[@name='input-199']")
-    delivery_subname = context.driver.find_element_by_xpath("//input[@name='input-862']")
+    delivery_name = context.driver.find_elements_by_xpath("//input[@placeholder='Imię']")
+    delivery_subname = context.driver.find_elements_by_xpath("//input[@placeholder='Nazwisko']")
     delivery_address = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
     delivery_phone = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
+    delivery_postal = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+    delivery_city = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
     try:
         delivery_email.clear()
         delivery_email.send_keys(random_email)
-        delivery_name.clear(random_name)
-        delivery_name.send_keys(random_name)
-        delivery_subname.clear(random_name)
-        delivery_subname.send_keys(random_name)
-        delivery_address.clear(random_address)
+        delivery_name[1].clear()
+        delivery_name[1].send_keys(random_name)
+        delivery_subname[1].clear()
+        delivery_subname[1].send_keys(random_subname)
+        delivery_address.clear()
         delivery_address.send_keys(random_address)
+        delivery_postal.clear()
+        delivery_postal.send_keys(random_postal)
         delivery_phone.clear()
         delivery_phone.send_keys(random_phone)
+        delivery_city.clear()
+        delivery_city.send_keys(random_address)
     except NoSuchElementException:
-        logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND PASSWORD MODULE")
+        logging.error("  Scenario: Adding/editing address to my account |   CANNOT FILL DELIVERY DATA")
         context.driver.close()
 
 
 @then('save it and compare too')
 def save_it_and_compare_too(context):
+    delivery_email = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
+    delivery_name = context.driver.find_elements_by_xpath("//input[@placeholder='Imię']")
+    delivery_subname = context.driver.find_elements_by_xpath("//input[@placeholder='Nazwisko']")
+    delivery_address = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
+    delivery_phone = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
+    delivery_postal = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+    delivery_city = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
     try:
-        logout_button = context.driver.find_element(By.CSS_SELECTOR, "div.menu-select-btn:nth-child(3)").is_displayed()
-        assert logout_button is True
+        time.sleep(3)
+        delivery_email_value = delivery_email.get_attribute('value')
+        delivery_name_value = delivery_name[1].get_attribute('value')
+        delivery_subname_value = delivery_subname[1].get_attribute('value')
+        delivery_address_value = delivery_address.get_attribute('value')
+        delivery_phone_value = delivery_phone.get_attribute('value')
+        delivery_postal_value = delivery_postal.get_attribute('value')
+        delivery_city_value = delivery_city.get_attribute('value')
+        if delivery_email_value == random_email and delivery_name_value == random_name \
+                and delivery_subname_value == random_subname and delivery_address_value == random_address \
+                and str(delivery_phone_value) == str(random_phone) and str(delivery_postal_value) == str(random_postal)\
+                and delivery_city_value == random_address:
+            pass
+        else:
+            logging.error("  Scenario: Adding/editing adress to my account  |   "
+                          "USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
+                          "   NAME / " + random_name + " / " + delivery_name_value +
+                          " ; SUBNAME / " + random_subname + " / " + delivery_subname_value +
+                          " ; EMAIL / " + random_email + " / " + delivery_email_value +
+                          " ; ADDRESS / " + random_address + " / " + delivery_address_value +
+                          " ; PHONE / " + str(random_phone) + " / " + str(delivery_phone_value) +
+                          " ; POSTAL / " + str(random_postal) + " / " + str(delivery_postal_value) +
+                          " ; CITY / " + str(random_address) + " / " + str(delivery_city_value))
+            context.driver.close()
     except NoSuchElementException:
-        logging.error("  Scenario: Adding/editing address to my account |   INVALID LOGIN/PASSWORD")
+        logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA")
         context.driver.close()
 
 
 @then('end that test')
 def end_that_test(context):
-    pass
+    context.driver.close()
