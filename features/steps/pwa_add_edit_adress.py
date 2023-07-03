@@ -10,7 +10,7 @@ import time
 
 def randomizer(size):
     random_string = ''.join([random.choice(string.ascii_lowercase)
-                             for n in range(size)])
+                             for _n in range(size)])
     return random_string
 
 
@@ -119,18 +119,16 @@ def fill_user_data(context):
 
 @then('save it and compare')
 def save_it_and_compare(context):
-    user_name = context.driver.find_element_by_xpath("//input[@placeholder='Imię']")
-    user_subname = context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']")
-    save_button = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(6)")
     try:
-        my_data = context.driver.find_element(By.CSS_SELECTOR,
-                                              "div.menu-select-btn:nth-child(3) > div:nth-child(1)")
+        save_button = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(6)")
         save_button.click()
-        time.sleep(1)
         context.driver.refresh()
         time.sleep(1)
-        my_data.click()
+        _my_data = context.driver.find_element(By.CSS_SELECTOR, "div.menu-select-btn:nth-child(3) > div:nth-child(1) > "
+                                                                "p:nth-child(1)").click()
         try:
+            user_name = context.driver.find_element_by_xpath("//input[@placeholder='Imię']")
+            user_subname = context.driver.find_element_by_xpath("//input[@placeholder='Nazwisko']")
             user_name_value = user_name.get_attribute('value')
             user_subname_value = user_subname.get_attribute('value')
             if user_name_value == random_name and user_subname_value == random_subname:
@@ -143,7 +141,6 @@ def save_it_and_compare(context):
                 context.driver.close()
         except:
             context.driver.close()
-
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA")
         context.driver.close()
@@ -163,58 +160,77 @@ def fill_delivery_data(context):
     delivery_postal = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
     delivery_city = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
     try:
-        delivery_email.clear()
-        delivery_email.send_keys(random_email)
-        delivery_name[1].clear()
-        delivery_name[1].send_keys(random_name)
-        delivery_subname[1].clear()
-        delivery_subname[1].send_keys(random_subname)
-        delivery_address.clear()
-        delivery_address.send_keys(random_address)
-        delivery_postal.clear()
-        delivery_postal.send_keys(random_postal)
-        delivery_phone.clear()
-        delivery_phone.send_keys(random_phone)
-        delivery_city.clear()
-        delivery_city.send_keys(random_address)
+        save_button = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(6)")
+        save_button.click()
+        context.driver.refresh()
+        time.sleep(1)
+        _my_data = context.driver.find_element(By.CSS_SELECTOR, "div.menu-select-btn:nth-child(3) > div:nth-child(1) > "
+                                                                "p:nth-child(1)").click()
+        try:
+            delivery_email.clear()
+            delivery_email.send_keys(random_email)
+            delivery_name[1].clear()
+            delivery_name[1].send_keys(random_name)
+            delivery_subname[1].clear()
+            delivery_subname[1].send_keys(random_subname)
+            delivery_address.clear()
+            delivery_address.send_keys(random_address)
+            delivery_postal.clear()
+            delivery_postal.send_keys(random_postal)
+            delivery_phone.clear()
+            delivery_phone.send_keys(random_phone)
+            delivery_city.clear()
+            delivery_city.send_keys(random_address)
+        except NoSuchElementException:
+            logging.error("  Scenario: Adding/editing address to my account |   CANNOT FILL DELIVERY DATA")
+            context.driver.close()
     except NoSuchElementException:
-        logging.error("  Scenario: Adding/editing address to my account |   CANNOT FILL DELIVERY DATA")
+        logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE DELIVERY DATA")
         context.driver.close()
 
 
 @then('save it and compare too')
 def save_it_and_compare_too(context):
-    delivery_email = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
-    delivery_name = context.driver.find_elements_by_xpath("//input[@placeholder='Imię']")
-    delivery_subname = context.driver.find_elements_by_xpath("//input[@placeholder='Nazwisko']")
-    delivery_address = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
-    delivery_phone = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
-    delivery_postal = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
-    delivery_city = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
     try:
-        time.sleep(3)
-        delivery_email_value = delivery_email.get_attribute('value')
-        delivery_name_value = delivery_name[1].get_attribute('value')
-        delivery_subname_value = delivery_subname[1].get_attribute('value')
-        delivery_address_value = delivery_address.get_attribute('value')
-        delivery_phone_value = delivery_phone.get_attribute('value')
-        delivery_postal_value = delivery_postal.get_attribute('value')
-        delivery_city_value = delivery_city.get_attribute('value')
-        if delivery_email_value == random_email and delivery_name_value == random_name \
-                and delivery_subname_value == random_subname and delivery_address_value == random_address \
-                and str(delivery_phone_value) == str(random_phone) and str(delivery_postal_value) == str(random_postal)\
-                and delivery_city_value == random_address:
-            pass
-        else:
-            logging.error("  Scenario: Adding/editing adress to my account  |   "
-                          "USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
-                          "   NAME / " + random_name + " / " + delivery_name_value +
-                          " ; SUBNAME / " + random_subname + " / " + delivery_subname_value +
-                          " ; EMAIL / " + random_email + " / " + delivery_email_value +
-                          " ; ADDRESS / " + random_address + " / " + delivery_address_value +
-                          " ; PHONE / " + str(random_phone) + " / " + str(delivery_phone_value) +
-                          " ; POSTAL / " + str(random_postal) + " / " + str(delivery_postal_value) +
-                          " ; CITY / " + str(random_address) + " / " + str(delivery_city_value))
+        save_button = context.driver.find_element(By.CSS_SELECTOR, "button.button-basic:nth-child(6)")
+        save_button.click()
+        context.driver.refresh()
+        time.sleep(1)
+        _my_data = context.driver.find_element(By.CSS_SELECTOR, "div.menu-select-btn:nth-child(3) > div:nth-child(1) > "
+                                                                "p:nth-child(1)").click()
+        try:
+            delivery_email = context.driver.find_element_by_xpath("//input[@placeholder='Email']")
+            delivery_name = context.driver.find_elements_by_xpath("//input[@placeholder='Imię']")
+            delivery_subname = context.driver.find_elements_by_xpath("//input[@placeholder='Nazwisko']")
+            delivery_address = context.driver.find_element_by_xpath("//input[@placeholder='Adres']")
+            delivery_phone = context.driver.find_element_by_xpath("//input[@placeholder='Numer telefonu']")
+            delivery_postal = context.driver.find_element_by_xpath("//input[@placeholder='Kod pocztowy']")
+            delivery_city = context.driver.find_element_by_xpath("//input[@placeholder='Miasto']")
+            delivery_email_value = delivery_email.get_attribute('value')
+            delivery_name_value = delivery_name[1].get_attribute('value')
+            delivery_subname_value = delivery_subname[1].get_attribute('value')
+            delivery_address_value = delivery_address.get_attribute('value')
+            delivery_phone_value = delivery_phone.get_attribute('value')
+            delivery_postal_value = delivery_postal.get_attribute('value')
+            delivery_city_value = delivery_city.get_attribute('value')
+            if delivery_email_value == random_email and delivery_name_value == random_name \
+                    and delivery_subname_value == random_subname and delivery_address_value == random_address \
+                    and str(delivery_phone_value) == str(random_phone) and str(delivery_postal_value) == str(
+                random_postal) \
+                    and delivery_city_value == random_address:
+                pass
+            else:
+                logging.error("  Scenario: Adding/editing adress to my account  |   "
+                              "USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED): " +
+                              "   NAME / " + random_name + " / " + delivery_name_value +
+                              " ; SUBNAME / " + random_subname + " / " + delivery_subname_value +
+                              " ; EMAIL / " + random_email + " / " + delivery_email_value +
+                              " ; ADDRESS / " + random_address + " / " + delivery_address_value +
+                              " ; PHONE / " + str(random_phone) + " / " + str(delivery_phone_value) +
+                              " ; POSTAL / " + str(random_postal) + " / " + str(delivery_postal_value) +
+                              " ; CITY / " + str(random_address) + " / " + str(delivery_city_value))
+                context.driver.close()
+        except Exception:
             context.driver.close()
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA")

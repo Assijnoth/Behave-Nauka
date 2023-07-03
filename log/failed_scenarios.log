@@ -448,3 +448,5 @@
 2023-07-03 17:16:48,061:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA
 2023-07-03 17:17:04,016:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA
 2023-07-03 17:19:01,577:ERROR:  Scenario: Adding/editing adress to my account  |   CANNOT SAVE USER DATA
+2023-07-03 17:35:44,908:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):    NAME / lajvm / lajvmsd ; SUBNAME / vhkzm / vhkzm
+2023-07-03 17:36:02,410:ERROR:  Scenario: Adding/editing adress to my account  |   USER DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):    NAME / wqbju / wqbju ; SUBNAME / bdsyt / bdsytsd
