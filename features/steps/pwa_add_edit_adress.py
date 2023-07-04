@@ -129,7 +129,7 @@ def fill_user_data(context):
         context.driver.close()
 
 
-@then('save it and compare')
+@then('save it and compare user data')
 def save_it_and_compare(context):
     try:
         _save_button_user_data = context.driver.find_element(By.CSS_SELECTOR,
