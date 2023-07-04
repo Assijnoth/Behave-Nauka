@@ -84,9 +84,6 @@ def check_if_login_is_correct(context):
         context.driver.close()
 
 
-# Moje dane.click
-
-
 @then('go to my data')
 def go_to_mydata(context):
     my_data = context.driver.find_element(By.CSS_SELECTOR, ".menu-select-btn:nth-child(3) p")
@@ -132,8 +129,6 @@ def fill_user_data(context):
         context.driver.close()
 
 
-# aktualizuj dane.click -> refresh -> moje dane.click -> porównaj pola imię i nazwisko ze zmiennymi name i subname
-
 @then('save it and compare')
 def save_it_and_compare(context):
     try:
@@ -142,6 +137,7 @@ def save_it_and_compare(context):
         _save_button_delivery_data = context.driver.find_element(By.CSS_SELECTOR,
                                                                  "button.button-basic:nth-child(11) > "
                                                                  "span:nth-child(1)").click()
+
         time.sleep(1)
         context.driver.refresh()
         time.sleep(1)
@@ -188,8 +184,7 @@ def compare_delivery_data(context):
         if delivery_email_value == random_email and delivery_name_value == random_name \
                 and delivery_subname_value == random_subname and delivery_address_value == random_address \
                 and str(delivery_phone_value) == str(random_phone) and str(delivery_postal_value) == str(
-            random_postal) \
-                and delivery_city_value == random_address:
+                random_postal) and delivery_city_value == random_address:
             pass
         else:
             logging.error("  Scenario: Adding/editing adress to my account  |   "
@@ -202,10 +197,8 @@ def compare_delivery_data(context):
                           " ; POSTAL / " + str(random_postal) + " / " + str(delivery_postal_value) +
                           " ; CITY / " + str(random_address) + " / " + str(delivery_city_value))
             context.driver.close()
-    except Exception:
+    except:
         context.driver.close()
-
-
 
 
 @then('end that test')
