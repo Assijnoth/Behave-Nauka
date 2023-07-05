@@ -45,9 +45,6 @@ def moving_item_to_cart(context):
         context.driver.close()
 
 
-# KLIKA W BOXA Z POTWIERDZENIEM DODANIA DO KOSZYKA, A NASTĘPNIE OTWIERA KOSZYK I PRZECHODZI DO CHECKOUT
-
-
 @then('move to cart and confirm')
 def move_to_cart_and_confirm(context):
     cart_confirm_box = context.driver.find_element(By.CSS_SELECTOR, ".messages-container")

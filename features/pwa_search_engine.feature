@@ -1,14 +1,18 @@
-Feature: Adding/editing adress to my account
-  Scenario: I can add/edit adress to my account
-     Given running webdrivers
-      When visit homepage
-      Then go to login panel
-       And enter account informations
-       And check if login is correct
-       And go to my data
-       And fill user data
-       And save it and compare user data
-       And compare delivery data
-       And end that test
+Feature: Search engine
+
+ Background: common steps
+       Given open webdrivers
+        When get homepage
+        Then go to search engine
+
+  Scenario: Search for existing item
+
+       And type a name of existing item
+       And check if search engine return that item
+       And shutdown webdrivers
 
 
+   Scenario: Search for non existing item
+       And type a random string
+       And check if search engine return something
+       And close webdrivers

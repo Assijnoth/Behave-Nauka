@@ -52,9 +52,6 @@ def go_to_login_panel(context):
         context.driver.close()
 
 
-# EMAIL, PASSWORD.send_keys and zaloguj.click
-
-
 @then('enter account informations')
 def enter_account_informations(context):
     email_input = context.driver.find_element_by_xpath("//input[@placeholder='E-mail']")
@@ -69,9 +66,6 @@ def enter_account_informations(context):
     except NoSuchElementException:
         logging.error("  Scenario: Adding/editing address to my account |   NOT FOUND PASSWORD MODULE")
         context.driver.close()
-
-
-# Check if LOGOUT is available
 
 
 @then('check if login is correct')

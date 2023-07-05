@@ -287,3 +287,25 @@
 2023-06-19 12:23:12,286:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
 2023-06-19 12:25:06,827:ERROR:  Scenario: INPOST order                         |   CAN'T CLICK 'ZNAJDZ PACZKOMATY' <Response [200]>
 2023-07-04 16:47:18,229:ERROR:  Scenario: Adding/editing adress to my account  |   USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):    NAME / xseim / Test ; SUBNAME / kqkxo / Testowicz ; EMAIL / zkznt@gmail.com /  ; ADDRESS / dazpn / test street 89 ; PHONE / 100210207 / 500500500 ; POSTAL / 47-118 / 00-000 ; CITY / dazpn / Warsaw
+2023-07-05 08:22:40,923:ERROR:  Scenario: Search engine                        |   SITE NOT FOUND
+2023-07-05 08:24:43,410:ERROR:  Scenario: Search engine                        |   SITE IS 404
+2023-07-05 08:24:48,194:ERROR:  Scenario: Search engine                        |   SITE IS 404
+2023-07-05 08:44:37,860:ERROR:  Scenario: Search engine                        |   SITE NOT FOUND
+2023-07-05 08:47:45,216:ERROR:  Scenario: INPOST order                         |   CAN'T FILL SEARCH INPUT AND SITE IS: <Response [200]>
+2023-07-05 08:48:05,232:ERROR:  Scenario: INPOST order                         |   CAN'T FILL SEARCH INPUT AND SITE IS: <Response [200]>
+2023-07-05 08:48:28,095:ERROR:  Scenario: INPOST order                         |   CAN'T FILL SEARCH INPUT AND SITE IS: <Response [200]>
+2023-07-05 08:49:05,036:ERROR:  Scenario: INPOST order                         |   CAN'T FILL SEARCH INPUT AND SITE IS: <Response [200]>
+2023-07-05 08:57:45,435:ERROR:  SZELKI
+2023-07-05 08:59:18,062:ERROR:  SZELKI
+2023-07-05 09:05:57,839:ERROR:  Scenario: Search engine                        |   SEARCH ENGINE DON'T RETURN ITEMS
+2023-07-05 09:23:12,987:ERROR:  Scenario: Search engine                        |   SITE NOT FOUND
+2023-07-05 09:23:18,093:ERROR:  Scenario: Search engine                        |   SITE NOT FOUND
+2023-07-05 09:23:54,671:ERROR:  Scenario: Search engine                        |   SEARCH ENGINE DON'T RETURN ITEMZZZ
+2023-07-05 09:28:12,897:ERROR:  Scenario: Search engine                        |   SEARCH ENGINE DON'T RETURN ITEMZZZ
+2023-07-05 09:28:36,243:ERROR:  Scenario: Search engine                        |   SEARCH ENGINE DON'T RETURN ITEMS
+2023-07-05 09:28:44,697:ERROR:  Scenario: Search engine                        |   CAN'T FILL SEARCH BAR AND SITE IS: <Response [200]>
+2023-07-05 09:28:44,698:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4f89fc6f10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/72db0b6c-47a1-4ffb-b7bb-043aacd20494/window
+2023-07-05 09:28:44,698:WARNING:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4f89fdb190>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/72db0b6c-47a1-4ffb-b7bb-043aacd20494/window
+2023-07-05 09:28:44,698:WARNING:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4f89fdbb90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/72db0b6c-47a1-4ffb-b7bb-043aacd20494/window
+2023-07-05 09:30:05,793:ERROR:  Scenario: Search engine                        |   SEARCH ENGINE DON'T RETURN ITEMZZZ
+2023-07-05 09:33:54,240:ERROR:  Scenario: Search engine                        |   GIT
