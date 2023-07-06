@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 # ENTER CLIENT NAME
-CLIENT = "lamania.test"
+CLIENT = "lamania.stage"
 
 # ENTER DRIVER PATH
 DRIVERS_PATH = "/home/mnoworyta/Nauka/Nauka/Behave-Nauka/drivers/geckodriver"
