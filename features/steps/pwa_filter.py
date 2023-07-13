@@ -115,20 +115,25 @@ def step_impl(context):
 
 
 @then('confirm filter and check results')
-def step_impl(context):
+def confirm_filter_and_check_results(context):
     try:
         confirm_button = context.driver.find_element(By.CSS_SELECTOR,
                                                      "button.btn-primary:nth-child(1) > span:nth-child(1)")
         confirm_button.click()
         try:
-
+            time.sleep(3)
+            result_product_tile = context.driver.find_element(By.CSS_SELECTOR,
+                                                              "div.product-card:nth-child(1) > div:nth-child(1) > "
+                                                              "div:nth-child(2) > a:nth-child(1) > p:nth-child(1)")
+            time.sleep(1)
+            result_product_tile.is_displayed()
         except NoSuchElementException:
             logging.error("  Scenario: Filtering returns right items        |"
-                          + "   CAN'T PICK COLOR FILTER")
+                          + "   WRONG FILTERING RESULTS")
             context.driver.close()
     except NoSuchElementException:
         logging.error("  Scenario: Filtering returns right items        |"
-                      + "   CAN'T CHOOSE COLOR")
+                      + "   CAN'T CONFIRM FILTERS")
         context.driver.close()
 
 
