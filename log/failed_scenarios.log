@@ -48,3 +48,9 @@
 2023-07-12 15:37:22,442:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
 2023-07-12 15:37:30,598:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
 2023-07-12 16:14:02,315:ERROR:  Scenario: Filtering returns right items        |   WRONG FILTERING RESULTS
+2023-07-13 15:37:36,798:ERROR:  Scenario: Adding/editing adress to my account  |   USER DELIVERY DATA WAS NOT SAVED CORRECTLY (INPUT / ENTERED / SAVED):    NAME / httqz / Test ; SUBNAME / cqnwy / Testowicz ; EMAIL / pabta@gmail.com /  ; ADDRESS / hysaq / test street 89 ; PHONE / 203956797 / 500500500 ; POSTAL / 47-125 / 00-000 ; CITY / hysaq / Warsaw
+2023-07-13 16:08:19,069:ERROR:  Scenario: Filtering returns right items        |   WRONG FILTERING RESULTS
+2023-07-13 16:10:00,761:ERROR:  Scenario: Is off category 404?                 |   CATEGORY IS NOT 404 - SITE STATUS IS: <Response [200]>
+2023-07-13 16:11:17,158:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error@gmail.com
+2023-07-13 16:11:25,003:ERROR:  Scenario: Signin with various logins           |   INVALID LOGIN/PASSWORD FOR USER error
+2023-07-13 16:29:29,046:ERROR:  Scenario: Does enabled category return items?  |   SITE NOT FOUND
