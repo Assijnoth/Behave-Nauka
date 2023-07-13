@@ -80,3 +80,7 @@ def apply_and_verify_result(context):
 @then('end this test')
 def end_this_test(context):
     pass
+
+@then('end this test')
+def end_this_test(context):
+    pass
